@@ -1,8 +1,8 @@
-import Layout from "../../components/Layout/Layout";
+import "./Home.scss";
 
 const Home = () => {
   return (
-    <Layout>
+    <div className="layout">
       <h1>Page Heading</h1>
       <h2>Section Heading</h2>
       <h3>Panel Heading</h3>
@@ -12,7 +12,7 @@ const Home = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p>
-    </Layout>
+    </div>
   );
 };
 
