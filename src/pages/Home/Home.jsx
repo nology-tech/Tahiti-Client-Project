@@ -1,8 +1,11 @@
 import ClientCard from "../../components/ClientCard/ClientCard";
 import "./Home.scss";
+import "../../assets/data/mockStaffData";
+import "../../assets/data/mockClientData";
 import Staff from "../../components/Staff/Staff";
 
-const Home = () => {
+const Home = (props) => {
+  const [clientData, staffData] = props;
   return (
     <div className="layout">
       <h1>Page Heading</h1>
@@ -14,9 +17,8 @@ const Home = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p>
-
-      <Staff />
-      <ClientCard />
+      <Staff staffNumber={staffNumber} image={image} jobTitle={jobTitle} />
+      <ClientCard name={name} image={image} />
     </div>
   );
 };
