@@ -4,7 +4,7 @@ import "./ClientActive.scss"
 
 const ClientActive = () => {
   return (
-    <div>ClientActive</div>
+    <div>ClientActive </div>
   )
 }
 

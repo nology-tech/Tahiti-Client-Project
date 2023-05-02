@@ -2,7 +2,7 @@ import React from 'react'
 import "./Staff.scss"
 const Staff = () => {
   return (
-    <div>Staff</div>
+    <div>Staff </div>
   )
 }
 
