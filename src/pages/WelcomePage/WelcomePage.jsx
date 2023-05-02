@@ -4,7 +4,7 @@ const WelcomePage = () => {
   return (
     <div>
       <h1>Welcome Back</h1>
-      <h2>Section Heading</h2>
+      <h2>Welcome message</h2>
     </div>
   );
 };
