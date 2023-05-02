@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lato&family=Poppins:wght@400;500;600;700&family=Space+Mono&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #2D3748;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+}
+
+button {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.65rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 110%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    font-size: 120%;
+  }
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+}
+.form-container__label {
+  font-size: 12px;
+  color: #2D3748;
+  font-weight: bold;
+  margin-left: 20px;
+  padding: 8px 0;
+  margin-bottom: 5px;
+}
+.form-container__input {
+  height: 45px;
+  padding: 10px 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #A7A7A7;
+  border-radius: 4px;
+}/*# sourceMappingURL=Form.css.map */
