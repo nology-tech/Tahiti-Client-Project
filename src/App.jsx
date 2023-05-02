@@ -3,10 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import "./styles/main.scss";
 import Booking from "../src/pages/Booking/Booking";
 import ClientActive from "../src/pages/ClientActive/ClientActive";
-import ClientDelete from "../src/pages/ClientDelete/ClientDelete";
 import Clients from "../src/pages/Clients/Clients";
-import ClientsSearch from "../src/pages/ClientsSearch/ClientsSearch";
-import ClientsSorting from "../src/pages/ClientsSorting/ClientsSorting";
 import EditClient from "../src/pages/EditClient/EditClient";
 import EditResources from "../src/pages/EditResources/EditResources";
 import Home from "../src/pages/Home/Home";
@@ -35,12 +32,9 @@ const App = () => {
         element={<StaffEditClient />}
       />
       <Route path="/clients" element={<Clients />} />
-      <Route path="/client-search" element={<ClientsSearch />} />
       <Route path="/client-active/:clientId" element={<ClientActive />} />
       <Route path="/client-new" element={<NewClient />} />
       <Route path="/client-edit/:clientId" element={<EditClient />} />
-      <Route path="/client-sorting" element={<ClientsSorting />} />
-      <Route path="/client-delete" element={<ClientDelete />} />
       <Route path="/resources" element={<Resources />} />
       <Route path="/edit-resources" element={<EditResources />} />
       <Route path="/request-resources" element={<RequestResources />} />
