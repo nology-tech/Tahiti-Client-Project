@@ -1,4 +1,6 @@
+import ClientCard from "../../components/ClientCard/ClientCard";
 import "./Home.scss";
+import Staff from "../../components/Staff/Staff";
 
 const Home = () => {
   return (
@@ -12,6 +14,9 @@ const Home = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p>
+
+      <Staff />
+      <ClientCard />
     </div>
   );
 };
