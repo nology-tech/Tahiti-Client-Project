@@ -13,10 +13,12 @@ const WelcomePage = () => {
           treatments that will make you look like you are 18 again!
         </p>
         <Form />
+        <button>Log in</button>
       </div>
-      <div className="picture-container">
+      <img src={WelcomeImage} />
+      {/* <div className="picture-container">
         <img src={WelcomeImage} />
-      </div>
+      </div> */}
     </div>
   );
 };
