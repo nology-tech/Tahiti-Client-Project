@@ -1,8 +1,8 @@
 import "./Staff.scss";
 import React from "react";
-import staffImage from "../../assets/data/mockStaffData";
+import "../../assets/data/mockStaffData";
 
-const Staff = ({ staffNumber, jobTitle }) => {
+const Staff = ({ staffNumber, jobTitle, staffImage }) => {
   return (
     <div className="staff-card">
       <img className="staff-card__img" src={staffImage} alt="staff-image" />

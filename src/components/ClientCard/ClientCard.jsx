@@ -1,8 +1,8 @@
 import "./ClientCard.scss";
 import React from "react";
-import ClientImage from "../../assets/data/mockClientData";
+import "../../assets/data/mockClientData";
 
-const ClientCard = ({ name }) => {
+const ClientCard = ({ name, ClientImage }) => {
   return (
     <div className="client-card">
       <img className="client-card__img" src={ClientImage} alt="client-image" />
