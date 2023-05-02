@@ -1,6 +1,6 @@
 import "./ClientCard.scss";
 import React from "react";
-import ClientImage from "../../assets/images/client-image.svg";
+import ClientImage from "../../assets/data/mockClientData"
 
 const ClientCard = ({ name }) => {
   return (

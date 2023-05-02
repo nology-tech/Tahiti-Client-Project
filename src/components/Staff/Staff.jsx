@@ -1,6 +1,6 @@
 import "./Staff.scss";
 import React from "react";
-import staffImage from "../../assets/images/staff-img.svg";
+import staffImage from "../../assets/data/mockStaffData";
 
 const Staff = ({ staffNumber, jobTitle }) => {
   return (
