@@ -1,6 +1,8 @@
-import ClientImage from "./assets/images/Ellipse.svg";
+import ClientImage from "../images/Ellipse.svg";
 
-clientData = {
+const clientData = {
   name: "Louis Thiel",
-  image: { ClientImage },
-};
+  clientImage: ClientImage,
+}
+
+export default clientData

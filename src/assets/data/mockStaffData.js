@@ -1,7 +1,9 @@
-import StaffImage from "./assets/images/Staff Image.svg";
+import StaffImage from "../images/Staff Image.svg";
 
-staffData = {
+const staffData = {
   staffNumber: "01",
-  image: { StaffImage },
+  staffImage: StaffImage,
   jobTitle: "Full Time Employee",
 };
+
+export default staffData
