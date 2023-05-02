@@ -1,0 +1,24 @@
+@use "../../styles/variables" as *;
+@use "../../styles/reset" as *;
+@use "../../styles/_typography" as *;
+
+
+.SideNavComponent {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin:15px;
+    position: relative;
+    left:20%;
+
+    
+    h3 {
+        padding-left:30px;
+        font-family: "Poppins";
+        font-Weight: 500;
+        font-size:12px;
+        line-height: 18px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+}

@@ -1,15 +1,25 @@
 import "./SideNav.scss";
-import "../../assets/images/home-icon.svg";
-import "../../assets/images/book-app-icon.svg";
-import "../../assets/images/staff-icon.svg";
-import "../../assets/images/clients-icon.svg";
-import "../../assets/images/resources-icon.svg";
-import "../../assets/images/settings-icon.svg";
+import homeIcon from "../assets/images/home-icon.svg";
+import bookIcon from "../assets/images/book-app-icon.svg";
+import staffIcon from "../assets/images/staff-icon.svg";
+import clientsIcon from "../assets/images/clients-icon.svg";
+import resourcesIcon from "../assets/images/resources-icon.svg";
+import settingsIcon from "../assets/images/settings-icon.svg";
+import Components from "./Components/Components";
+import navLine from "../assets/images/nav-line.svg"
 
 const SideNav = () => {
+  console.log(homeIcon)
   return (
     <section className="SideNav">
-      <Components name="Home" image={image} />
+      <Components image={homeIcon} name="Home" />
+      <Components image={bookIcon} name="Book Appointment" />
+      <Components image={staffIcon} name="Staff"  />
+      <Components image={clientsIcon} name="Clients" />
+      <Components image={resourcesIcon} name="Resources"  />
+      <img className="SideNav--line" src={navLine}/>
+      <Components image={settingsIcon} name="Settings"  />
+
     </section>
   );
 };
