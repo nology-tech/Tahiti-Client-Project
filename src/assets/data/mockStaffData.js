@@ -1,4 +1,4 @@
-import StaffImage from "../images/Staff Image.svg";
+
 
 const staffData = {
   staffNumber: "01",

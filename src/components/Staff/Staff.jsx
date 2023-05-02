@@ -1,7 +1,8 @@
 import "./Staff.scss";
 import React from "react";
+import staffImage from "../../assets/images/staff-img.svg";
 
-const Staff = ({ staffNumber, staffImage, jobTitle }) => {
+const Staff = ({ staffNumber, jobTitle }) => {
   return (
     <div className="staff-card">
       <img className="staff-card__img" src={staffImage} alt="staff-image" />
