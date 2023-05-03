@@ -1,6 +1,6 @@
 import React from "react";
 import "./Booking.scss";
-import SideNav from "../../SideNav/SideNav";
+import SideNav from "../../components/SideNav/SideNav";
 
 const Booking = () => {
   return (

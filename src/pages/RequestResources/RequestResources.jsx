@@ -1,6 +1,6 @@
 import React from "react";
 import "./RequestResources.scss";
-import SideNav from "../../SideNav/SideNav";
+import SideNav from "../../components/SideNav/SideNav";
 
 const RequestResources = () => {
   return (

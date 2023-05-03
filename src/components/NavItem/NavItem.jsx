@@ -1,7 +1,7 @@
 import React from "react";
-import "./Components.scss";
+import "./NavItem.scss";
 
-const Components = ({ name, image} ) => {
+const Components = ({ name, image }) => {
   return (
     <div className="SideNavComponent">
       <img src={image} alt="" />

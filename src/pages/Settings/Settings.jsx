@@ -1,6 +1,6 @@
 import React from "react";
 import "./Settings.scss";
-import SideNav from "../../SideNav/SideNav";
+import SideNav from "../../components/SideNav/SideNav";
 
 const Settings = () => {
   return (

@@ -1,15 +1,15 @@
 import "./SideNav.scss";
-import homeIcon from "../assets/images/home-icon.svg";
-import bookIcon from "../assets/images/book-app-icon.svg";
-import staffIcon from "../assets/images/staff-icon.svg";
-import clientsIcon from "../assets/images/clients-icon.svg";
-import resourcesIcon from "../assets/images/resources-icon.svg";
-import settingsIcon from "../assets/images/settings-icon.svg";
-import Components from "./Components/Components";
-import navLine from "../assets/images/nav-line.svg";
-import logoLeft from "../assets/images/logo-left-white.svg";
-import logoRight from "../assets/images/logo-right-white.svg";
-import iconHouse from "../assets/images/mobile-home-btn.svg";
+import homeIcon from "../../assets/images/home-icon.svg";
+import bookIcon from "../../assets/images/book-app-icon.svg";
+import staffIcon from "../../assets/images/staff-icon.svg";
+import clientsIcon from "../../assets/images/clients-icon.svg";
+import resourcesIcon from "../../assets/images/resources-icon.svg";
+import settingsIcon from "../../assets/images/settings-icon.svg";
+import NavItem from "../NavItem/NavItem";
+import navLine from "../../assets/images/nav-line.svg";
+import logoLeft from "../../assets/images/logo-left-white.svg";
+import logoRight from "../../assets/images/logo-right-white.svg";
+import iconHouse from "../../assets/images/mobile-home-btn.svg";
 import { NavLink, Link } from "react-router-dom";
 
 const SideNav = () => {
@@ -26,7 +26,7 @@ const SideNav = () => {
           to="/home"
           style={{ textDecoration: "none" }}
         >
-          <Components image={homeIcon} name="Home" />
+          <NavItem image={homeIcon} name="Home" />
         </NavLink>
 
         <NavLink
@@ -36,7 +36,7 @@ const SideNav = () => {
           to="/booking"
           style={{ textDecoration: "none" }}
         >
-          <Components image={bookIcon} name="Book Appointment" />
+          <NavItem image={bookIcon} name="Book Appointment" />
         </NavLink>
 
         <NavLink
@@ -46,7 +46,7 @@ const SideNav = () => {
           to="/staff"
           style={{ textDecoration: "none" }}
         >
-          <Components image={staffIcon} name="Staff" />
+          <NavItem image={staffIcon} name="Staff" />
         </NavLink>
 
         <NavLink
@@ -56,7 +56,7 @@ const SideNav = () => {
           to="/clients"
           style={{ textDecoration: "none" }}
         >
-          <Components image={clientsIcon} name="Clients" />
+          <NavItem image={clientsIcon} name="Clients" />
         </NavLink>
 
         <NavLink
@@ -66,7 +66,7 @@ const SideNav = () => {
           to="/resources"
           style={{ textDecoration: "none" }}
         >
-          <Components image={resourcesIcon} name="Resources" />
+          <NavItem image={resourcesIcon} name="Resources" />
         </NavLink>
 
         <img className="SideNav--line" src={navLine} />
@@ -78,18 +78,15 @@ const SideNav = () => {
           to="/settings"
           style={{ textDecoration: "none" }}
         >
-          <Components image={settingsIcon} name="Settings" />
+          <NavItem image={settingsIcon} name="Settings" />
         </NavLink>
-        
       </section>
 
       <div className="home">
-        <Link to="/home">    
-            <img  src={iconHouse} alt="" />   
+        <Link to="/home">
+          <img src={iconHouse} alt="" />
         </Link>
-
       </div>
-      
     </div>
   );
 };

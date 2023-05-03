@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Clients.scss"
-import SideNav from "../../SideNav/SideNav";
+import SideNav from "../../components/SideNav/SideNav";
 
 const Clients = () => {
   return (

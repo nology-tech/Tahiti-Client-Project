@@ -1,6 +1,6 @@
 import React from "react";
 import "./EditClient.scss";
-import SideNav from "../../SideNav/SideNav";
+import SideNav from "../../components/SideNav/SideNav";
 
 const EditClient = () => {
   return (
