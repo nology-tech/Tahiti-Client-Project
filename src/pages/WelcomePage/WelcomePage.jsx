@@ -21,7 +21,7 @@ const WelcomePage = () => {
           <button>Log in</button>
         </div>
       </div>
-      <div></div>
+
       <img
         src={WelcomeImage}
         className="picture-main"
