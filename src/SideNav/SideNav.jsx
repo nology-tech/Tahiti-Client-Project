@@ -9,6 +9,7 @@ import Components from "./Components/Components";
 import navLine from "../assets/images/nav-line.svg";
 import logoLeft from "../assets/images/logo-left-white.svg";
 import logoRight from "../assets/images/logo-right-white.svg";
+import { Link } from "react-router-dom";
 
 const SideNav = () => {
   console.log(homeIcon);
@@ -16,13 +17,13 @@ const SideNav = () => {
     <section className="SideNav">
       <img className="white-logo-left" src={logoLeft} alt="logo-left" />
       <img className="white-logo-right" src={logoRight} alt="logo-right" />
-      <Components image={homeIcon} name="Home" />
-      <Components image={bookIcon} name="Book Appointment" />
-      <Components image={staffIcon} name="Staff" />
-      <Components image={clientsIcon} name="Clients" />
-      <Components image={resourcesIcon} name="Resources" />
+      <Link className="component" to ="/home"><Components image={homeIcon} name="Home" /></Link>
+      <Link className="component" to ="/booking"><Components image={bookIcon} name="Book Appointment" /></Link>
+      <Link className="component" to="/staff"><Components image={staffIcon} name="Staff" /></Link>
+      <Link className="component" to="/clients"><Components image={clientsIcon} name="Clients" /></Link>
+      <Link className="component" to="resources"><Components image={resourcesIcon} name="Resources" /></Link>
       <img className="SideNav--line" src={navLine} />
-      <Components image={settingsIcon} name="Settings" />
+      <Link className="component" to="settings"><Components image={settingsIcon} name="Settings" /></Link>
     </section>
   );
 };
