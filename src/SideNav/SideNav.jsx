@@ -9,20 +9,75 @@ import Components from "./Components/Components";
 import navLine from "../assets/images/nav-line.svg";
 import logoLeft from "../assets/images/logo-left-white.svg";
 import logoRight from "../assets/images/logo-right-white.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const SideNav = () => {
   return (
     <section className="SideNav">
       <img className="white-logo-left" src={logoLeft} alt="logo-left" />
       <img className="white-logo-right" src={logoRight} alt="logo-right" />
-      <Link className="component" to ="/home"><Components image={homeIcon} name="Home" /></Link>
-      <Link className="component" to ="/booking"><Components image={bookIcon} name="Book Appointment" /></Link>
-      <Link className="component" to="/staff"><Components image={staffIcon} name="Staff" /></Link>
-      <Link className="component" to="/clients"><Components image={clientsIcon} name="Clients" /></Link>
-      <Link className="component" to="/resources"><Components image={resourcesIcon} name="Resources" /></Link>
+
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : ""
+        }
+        to="/home"
+        style={{ textDecoration: "none" }}
+      >
+        <Components image={homeIcon} name="Home" />
+      </NavLink>
+
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : ""
+        }
+        to="/booking"
+        style={{ textDecoration: "none" }}
+      >
+        <Components image={bookIcon} name="Book Appointment" />
+      </NavLink>
+
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : ""
+        }
+        to="/staff"
+        style={{ textDecoration: "none" }}
+      >
+        <Components image={staffIcon} name="Staff" />
+      </NavLink>
+
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : ""
+        }
+        to="/clients"
+        style={{ textDecoration: "none" }}
+      >
+        <Components image={clientsIcon} name="Clients" />
+      </NavLink>
+
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : ""
+        }
+        to="/resources"
+        style={{ textDecoration: "none" }}
+      >
+        <Components image={resourcesIcon} name="Resources" />
+      </NavLink>
+
       <img className="SideNav--line" src={navLine} />
-      <Link className="component" to="/settings"><Components image={settingsIcon} name="Settings" /></Link>
+
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : ""
+        }
+        to="/settings"
+        style={{ textDecoration: "none" }}
+      >
+        <Components image={settingsIcon} name="Settings" />
+      </NavLink>
     </section>
   );
 };
