@@ -6,7 +6,7 @@ const WelcomePage = () => {
     <div>
       <h1>Welcome Back </h1>
       <h2>Welcome message</h2>
-      <SideNav />
+      <SideNav/>
     </div>
   );
 };

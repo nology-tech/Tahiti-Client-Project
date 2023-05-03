@@ -12,7 +12,6 @@ import logoRight from "../assets/images/logo-right-white.svg";
 import { Link } from "react-router-dom";
 
 const SideNav = () => {
-  console.log(homeIcon);
   return (
     <section className="SideNav">
       <img className="white-logo-left" src={logoLeft} alt="logo-left" />
@@ -21,9 +20,9 @@ const SideNav = () => {
       <Link className="component" to ="/booking"><Components image={bookIcon} name="Book Appointment" /></Link>
       <Link className="component" to="/staff"><Components image={staffIcon} name="Staff" /></Link>
       <Link className="component" to="/clients"><Components image={clientsIcon} name="Clients" /></Link>
-      <Link className="component" to="resources"><Components image={resourcesIcon} name="Resources" /></Link>
+      <Link className="component" to="/resources"><Components image={resourcesIcon} name="Resources" /></Link>
       <img className="SideNav--line" src={navLine} />
-      <Link className="component" to="settings"><Components image={settingsIcon} name="Settings" /></Link>
+      <Link className="component" to="/settings"><Components image={settingsIcon} name="Settings" /></Link>
     </section>
   );
 };
