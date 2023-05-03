@@ -80,13 +80,16 @@ const SideNav = () => {
         >
           <Components image={settingsIcon} name="Settings" />
         </NavLink>
-        <Link to="/home">
-          <footer>
-            {" "}
-            <img className="home" src={iconHouse} alt="" />
-          </footer>
-        </Link>
+        
       </section>
+
+      <div className="home">
+        <Link to="/home">    
+            <img  src={iconHouse} alt="" />   
+        </Link>
+
+      </div>
+      
     </div>
   );
 };
