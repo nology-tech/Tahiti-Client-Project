@@ -6,11 +6,11 @@ import Logo from "../../assets/images/logo black.svg";
 
 const WelcomePage = () => {
   return (
-    <>
+    <div className="container">
+      <div className="logo-container">
+        <img src={Logo} alt="logo" className="picture-logo" />
+      </div>
       <div className="welcome-container">
-        <div className="logo-container">
-          <img src={Logo} alt="logo" className="picture-logo" />
-        </div>
         <div className="header-container">
           <h1>Welcome Back </h1>
           <p>
@@ -20,16 +20,14 @@ const WelcomePage = () => {
           <Form />
           <button>Log in</button>
         </div>
-        <img
-          src={WelcomeImage}
-          className="picture-main"
-          alt="blurry image of a class"
-        />
-        {/* <div className="picture-container">
-        <img src={WelcomeImage} />
-      </div> */}
       </div>
-    </>
+      <div></div>
+      <img
+        src={WelcomeImage}
+        className="picture-main"
+        alt="blurry image of a class"
+      />
+    </div>
   );
 };
 export default WelcomePage;
