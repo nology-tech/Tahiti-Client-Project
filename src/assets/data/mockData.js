@@ -1,5 +1,3 @@
-import staffImage from "../images/staff-img.svg";
-
 const mockData = {
   clientData: [
     {
