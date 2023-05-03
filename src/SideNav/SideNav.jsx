@@ -9,10 +9,13 @@ import Components from "./Components/Components";
 import navLine from "../assets/images/nav-line.svg";
 import logoLeft from "../assets/images/logo-left-white.svg";
 import logoRight from "../assets/images/logo-right-white.svg";
+import iconRoof from "../assets/images/home-icon-roof.svg"
+import iconHouse from "../assets/images/home-icon-house.svg"
 import { NavLink } from "react-router-dom";
 
 const SideNav = () => {
   return (
+  <div>
     <section className="SideNav">
       <img className="white-logo-left" src={logoLeft} alt="logo-left" />
       <img className="white-logo-right" src={logoRight} alt="logo-right" />
@@ -78,7 +81,18 @@ const SideNav = () => {
       >
         <Components image={settingsIcon} name="Settings" />
       </NavLink>
+
+      
+
     </section>
+      <footer> <div
+     className="MobileHomeComponent">
+        <img className="icon-roof" src={iconRoof} alt="home-roof" />
+        <img className="icon-house" src={iconHouse} alt="home-roof" />
+        <h3 className="heading">HOME</h3>
+        </div>
+      </footer>
+  </div>
   );
 };
 
