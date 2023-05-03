@@ -1,7 +1,7 @@
 import React from "react";
-import "./Form.scss";
+import "./LoginForm.scss";
 
-const Form = () => {
+const LoginForm = () => {
   return (
     <div className="form-container">
       <label className="form-container__label">Email Address</label>
@@ -12,4 +12,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default LoginForm;
