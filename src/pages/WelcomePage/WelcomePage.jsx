@@ -3,6 +3,7 @@ import "./WelcomePage.scss";
 import WelcomeImage from "../../assets/images/Background-img-welcome.svg";
 import Form from "../../Components/Form/Form";
 
+
 const WelcomePage = () => {
   return (
     <div className="welcome-container">
