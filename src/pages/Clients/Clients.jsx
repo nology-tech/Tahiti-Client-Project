@@ -4,10 +4,11 @@ import Table from "../../components/Table/Table";
 
 const Clients = () => {
   return (
-    <div>
+    <div className="clients-container">
       Clients
       <Table
         title={"Clients List"}
+        header={"Staff 01"}
         column1={"Client Name"}
         column2={"date of birth"}
         column3={"email address"}
