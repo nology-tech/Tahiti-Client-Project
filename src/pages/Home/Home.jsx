@@ -5,7 +5,11 @@ import MobileNavPage from "../../components/MobileNavPage/MobileNavPage";
 const Home = () => {
   return (
     <div className="layout">
-      <SideNav/>      
+      <div className="desktopNav">
+      <SideNav />  
+
+      </div>
+          
       <div className="mockHeader">
         <h>Header</h>
       </div>

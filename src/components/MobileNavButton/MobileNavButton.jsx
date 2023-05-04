@@ -8,10 +8,7 @@ const MobileNavButton = ({ name }) => {
         <div className="mobileButton">
           <h1>{name}</h1>
           <img src={Arrow} alt="" />
-        </div>
-
-    
-    
+        </div>  
   );
 };
 
