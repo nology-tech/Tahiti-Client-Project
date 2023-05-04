@@ -1,15 +1,16 @@
 import React from "react";
 import "./MobileNavButton.scss";
-import { Link } from "react-router-dom";
+import Arrow from "../../assets/images/right-arrow-dark.svg"
+//import { Link } from "react-router-dom";
 
-const MobileNavButton = (name) => {
+const MobileNavButton = ({ name }) => {
   return (
-    <Link>
-      <div className="mobileButton">
-        <button>{name}</button>
-      </div>
-      ;
-    </Link>
+        <div className="mobileButton">
+          <h1>{name}</h1>
+          <img src={Arrow} alt="" />
+        </div>
+
+    
     
   );
 };

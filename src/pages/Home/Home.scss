@@ -1,10 +1,26 @@
 @use "../../styles/variables" as *;
 
-
+.mockHeader {
+  display:none
+}
 .layout {
   height: 100vh;
   width: 100%;
   background-color: $color-background-main;
 }
 
+@media screen and (max-width:720px) {
+  .layout {
+    background-color: $color-white-header;
+  }
+  .SideNav {
+    display:none;
+  }
+  .mockHeader {
+    display:block;
+  }
+}
+
+//<h1>Piya made this change</h1>
+//<h2>Section Heading</h2>
 
