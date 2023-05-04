@@ -17,37 +17,43 @@ import StaffEditClient from "../src/pages/StaffEditClient/StaffEditClient";
 import WelcomePage from "../src/pages/WelcomePage/WelcomePage";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./App.scss"
 
 const App = () => {
 
   const [password, setPassword]=useState("")
   const [email, setEmail]=useState("")
+  const [isValid, setIsValid]=useState(true)
 
   const navigate = useNavigate()
 
   const submitForm = (event)=> {
     event.preventDefault();
     if (password&&email!=="") {
-      navigate('/home')
+      navigate('/home')  
+    }
+    else {  
+      setIsValid(!isValid)   
     }
   }
 
+  const hideMessage = ()=> {
+    navigate('/') 
+
+  }
+
+
   const passwordInput = (event)=> {
     setPassword(event.target.value)
-
   }
 
   const emailInput = (event)=> {
     setEmail(event.target.value)
-
   }
-
- 
-
 
   return (
     <Routes>
-      <Route path="/" element={<WelcomePage password={password} email={email} passwordInput={passwordInput} emailInput={emailInput} submitForm={submitForm}/>} />
+      <Route path="/" element={<WelcomePage password={password} email={email} passwordInput={passwordInput} emailInput={emailInput} submitForm={submitForm} isValid={isValid} hideMessage={hideMessage}/>} />
       <Route path="/home" element={<Home />} />
       <Route path="/booking" element={<Booking />} />
       <Route path="/staff" element={<Staff />} />

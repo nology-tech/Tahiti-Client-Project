@@ -4,7 +4,7 @@ import WelcomeImage from "../../assets/images/Background-img-welcome.svg";
 import Logo from "../../assets/images/logo black.svg";
 import LoginForm from "../../components/Forms/LoginForm/LoginForm";
 
-const WelcomePage = ({email, password, submitForm, emailInput, passwordInput}) => {
+const WelcomePage = ({email, password, submitForm, emailInput, passwordInput, isValid, hideMessage}) => {
   return (
     <div className="container">
       <div className="logo-container">
@@ -27,6 +27,14 @@ const WelcomePage = ({email, password, submitForm, emailInput, passwordInput}) =
         className="picture-main"
         alt="blurry image of a class"
       />
+      <div>
+        {!isValid&&
+        <div className="displayMessage">
+          <h1 >
+          Please enter a valid email and password!
+          </h1>
+          <button onClick={hideMessage}>Try again</button></div>}
+      </div>
     </div>
   );
 };
