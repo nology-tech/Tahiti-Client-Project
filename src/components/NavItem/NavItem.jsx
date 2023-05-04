@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavItem.scss";
 
-const Components = ({ name, image }) => {
+const NavItem = ({ name, image }) => {
   return (
     <div className="SideNavComponent">
       <img src={image} alt="" />
@@ -10,4 +10,4 @@ const Components = ({ name, image }) => {
   );
 };
 
-export default Components;
+export default NavItem;

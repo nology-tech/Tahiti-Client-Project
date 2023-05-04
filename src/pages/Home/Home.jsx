@@ -9,7 +9,6 @@ const Home = () => {
       <div className="desktopNav">
         <SideNav />
       </div>
-
       <div className="mockHeader">
         <h1>Home</h1>
       </div>
@@ -20,7 +19,6 @@ const Home = () => {
         <HompageCard title="Resources" link="/resources" />
         <HompageCard title="Settings" link="/settings" />
       </div>
-
       <MobileNavPage />
     </div>
   );

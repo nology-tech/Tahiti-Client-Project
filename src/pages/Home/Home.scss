@@ -10,7 +10,6 @@
   background-color: $color-white-header;
 }
 
-
 .cardContainer {
   display: flex;
   flex-direction: row;
@@ -25,7 +24,6 @@
   .desktopNav {
     display: none;
   }
-
   .cardContainer {
     display: none;
   }
@@ -39,4 +37,3 @@
     display: block;
   }
 }
-

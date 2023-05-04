@@ -16,7 +16,6 @@ const SideNav = () => {
     <div>
       <section className="SideNav">
         <img className="white-logo" src={whiteLogo} alt="logo-left" />
-
         <img className="SideNav--line" src={navLine} id="line1" />
         <div className="menu"></div>
 
