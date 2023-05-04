@@ -15,11 +15,39 @@ import Staff from "../src/pages/Staff/Staff";
 import StaffBookingActive from "../src/pages/StaffBookingActive/StaffBookingActive";
 import StaffEditClient from "../src/pages/StaffEditClient/StaffEditClient";
 import WelcomePage from "../src/pages/WelcomePage/WelcomePage";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const App = () => {
+
+  const [password, setPassword]=useState("")
+  const [email, setEmail]=useState("")
+
+  const navigate = useNavigate()
+
+  const submitForm = (event)=> {
+    event.preventDefault();
+    if (password&&email!=="") {
+      navigate('/home')
+    }
+  }
+
+  const passwordInput = (event)=> {
+    setPassword(event.target.value)
+
+  }
+
+  const emailInput = (event)=> {
+    setEmail(event.target.value)
+
+  }
+
+ 
+
+
   return (
     <Routes>
-      <Route path="/" element={<WelcomePage />} />
+      <Route path="/" element={<WelcomePage password={password} email={email} passwordInput={passwordInput} emailInput={emailInput} submitForm={submitForm}/>} />
       <Route path="/home" element={<Home />} />
       <Route path="/booking" element={<Booking />} />
       <Route path="/staff" element={<Staff />} />
