@@ -21,7 +21,7 @@ const Clients = () => {
       This is the heading
       <Table
         title={"Clients List"}
-        header={""}
+        // header={"HELLO"}
         column1={"Client Name"}
         column2={"date of birth"}
         column3={"email address"}
