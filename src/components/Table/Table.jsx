@@ -5,7 +5,6 @@ import gridIcon from "../../assets/images/grid-icon.svg";
 import sortIcon from "../../assets/images/sort-icon.svg";
 import filterIcon from "../../assets/images/filter-icon.svg";
 import searchIcon from "../../assets/images/search-icon.svg";
-//import rightArrow from "../../assets/images/search-icon.svg";
 
 const Table = ({
   column1,
@@ -15,11 +14,6 @@ const Table = ({
   column5,
   title,
   header,
-  item1,
-  item2,
-  item3,
-  item4,
-  item5,
 }) => {
   return (
     <div>
@@ -61,15 +55,6 @@ const Table = ({
         <p className="table__column-header">{column3}</p>
         <p className="table__column-header">{column4}</p>
         <p className="table__column-header">{column5}</p>
-      </div>
-
-      <div className="data-row">
-        <p className="data-row__item--first">{item1}</p>
-        <p className="data-row__item">{item2}</p>
-        <p className="data-row__item">{item3}</p>
-        <p className="data-row__item--fourth">{item4}</p>
-        <p className="data-row__item">{item5}</p>
-        <p className="right-arrow">&gt;</p>
       </div>
     </div>
   );
