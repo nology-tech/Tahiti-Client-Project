@@ -4,10 +4,10 @@ import "./HomepageCard.scss";
 
 const HompageCard = ({ title, link }) => {
   return (
-    <div className="homepage">
-      <h1 className="homepage__heading">{title}</h1>
+    <div className="homepage-card">
+      <h1 className="homepage-card__heading">{title}</h1>
       <Link to={link}>
-        <button className="homepage__button">Go</button>
+        <button className="homepage-card__button">Go</button>
       </Link>
     </div>
   );
