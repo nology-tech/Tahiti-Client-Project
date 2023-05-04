@@ -16,7 +16,7 @@
   box-shadow: 0px 20px 40px #f0f0ee;
   border-radius: 0px 30px 0px 0px;
   max-width: 309px;
-  max-height: 100vh;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   padding-top: 120px;
@@ -28,24 +28,14 @@
     margin-bottom: 15px;
   }
 
-  .white-logo-left {
-    height: 48px;
-    max-width: 83.66px;
+  .white-logo {
+    height: 80px;
+    max-width: 130px;
     position: absolute;
     left: 29%;
     right: 43.5%;
-    top: 6.44%;
+    top: 4.75%;
     bottom: 88.22%;
-  }
-  .white-logo-right {
-    height: 48px;
-    max-width: 83.66px;
-    position: absolute;
-    left: 29%;
-    right: 43.5%;
-    top: 6.44%;
-    bottom: 88.22%;
-    margin-left: 42.5px;
   }
 
   .active {
@@ -57,7 +47,7 @@
   }
 
   #line1 {
-    padding-bottom:15px;
+    padding-bottom: 15px;
   }
 }
 
@@ -71,25 +61,24 @@
     top: 90%;
     width: 100%;
     box-shadow: 0px -20px 40px rgba(97, 65, 65, 0.07);
-    
+
     background-color: #fffbfb;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top:15px;
-    padding-bottom:15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
-    img { 
+    img {
       width: 45%;
       padding-left: 6px;
-
     }
 
     h1 {
       font-size: 16px;
       font-family: "Jost";
-      margin:0;
+      margin: 0;
     }
   }
 }

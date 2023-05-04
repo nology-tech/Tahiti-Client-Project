@@ -7,8 +7,7 @@ import resourcesIcon from "../../assets/images/resources-icon.svg";
 import settingsIcon from "../../assets/images/settings-icon.svg";
 import NavItem from "../NavItem/NavItem";
 import navLine from "../../assets/images/nav-line.svg";
-import logoLeft from "../../assets/images/logo-left-white.svg";
-import logoRight from "../../assets/images/logo-right-white.svg";
+import whiteLogo from "../../assets/images/logo-white.svg";
 import iconHouse from "../../assets/images/black-home-icon.png";
 import { NavLink, Link } from "react-router-dom";
 
@@ -16,13 +15,10 @@ const SideNav = () => {
   return (
     <div>
       <section className="SideNav">
-        <img className="white-logo-left" src={logoLeft} alt="logo-left" />
-        <img className="white-logo-right" src={logoRight} alt="logo-right" />
+        <img className="white-logo" src={whiteLogo} alt="logo-left" />
 
         <img className="SideNav--line" src={navLine} id="line1" />
-        <div className="menu">
-
-        </div>
+        <div className="menu"></div>
 
         <NavLink
           className={({ isActive, isPending }) =>
