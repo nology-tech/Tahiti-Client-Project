@@ -14,6 +14,11 @@ const Clients = () => {
         column3={"email address"}
         column4={"mobile number"}
         column5={"practitioner"}
+        item1={"John Dow"}
+        item2={"09/09/1987"}
+        item3={"johndow@gmail.com"}
+        item4={"07456321987"}
+        item5={"Jane McCarthy"}
       />
     </div>
   );

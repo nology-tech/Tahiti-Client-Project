@@ -5,6 +5,7 @@ import gridIcon from "../../assets/images/grid-icon.svg";
 import sortIcon from "../../assets/images/sort-icon.svg";
 import filterIcon from "../../assets/images/filter-icon.svg";
 import searchIcon from "../../assets/images/search-icon.svg";
+//import rightArrow from "../../assets/images/search-icon.svg";
 
 const Table = ({
   column1,
@@ -14,6 +15,11 @@ const Table = ({
   column5,
   title,
   header,
+  item1,
+  item2,
+  item3,
+  item4,
+  item5,
 }) => {
   return (
     <div>
@@ -48,37 +54,22 @@ const Table = ({
       </div>
 
       <h3 id="table-header">{header}</h3>
-      <div className="table-container">
-        <table>
-          <tr>
-            <th>{column1}</th>
-            <th>{column2}</th>
-            <th>{column3}</th>
-            <th>{column4}</th>
-            <th>{column5}</th>
-          </tr>
-          <tr className="first-row">
-            <td className="first-row__first-column"> name1 </td>
-            <td>DOB1 </td>
-            <td>email1</td>
-            <td className="first-row__bold-column">mobile number1</td>
-            <td>practitioner1</td>
-          </tr>
-          <tr className="second-row">
-            <td className="first-row__first-column"> name1 </td>
-            <td>DOB1 </td>
-            <td>email1</td>
-            <td className="first-row__bold-column">mobile number1</td>
-            <td>practitioner1</td>
-          </tr>
-          <tr className="third-row">
-            <td className="first-row__first-column"> name1 </td>
-            <td>DOB1 </td>
-            <td>email1</td>
-            <td className="first-row__bold-column">mobile number1</td>
-            <td>practitioner1</td>
-          </tr>
-        </table>
+
+      <div className="table">
+        <p className="table__column-header">{column1}</p>
+        <p className="table__column-header">{column2}</p>
+        <p className="table__column-header">{column3}</p>
+        <p className="table__column-header">{column4}</p>
+        <p className="table__column-header">{column5}</p>
+      </div>
+
+      <div className="data-row">
+        <p className="data-row__item--first">{item1}</p>
+        <p className="data-row__item">{item2}</p>
+        <p className="data-row__item">{item3}</p>
+        <p className="data-row__item--fourth">{item4}</p>
+        <p className="data-row__item">{item5}</p>
+        <p className="right-arrow">&gt;</p>
       </div>
     </div>
   );
