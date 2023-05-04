@@ -1,13 +1,39 @@
 @use "../../styles/variables" as *;
 
+.mockHeader {
+  display: none;
+}
+
 .layout {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background-color: $color-white-header;
+}
 
+.cardContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 20px;
+  margin-left: 300px;
+  margin-top: 130px;
+}
+
+@media screen and (max-width: 720px) {
+  .desktopNav {
+    display: none;
+  }
+  .cardContainer {
+    display: none;
+  }
+  .layout {
+    background-color: $color-white-header;
+  }
+  .SideNav {
+    display: none;
+  }
+  .mockHeader {
+    display: block;
+  }
 }
