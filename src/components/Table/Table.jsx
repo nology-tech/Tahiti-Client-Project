@@ -49,13 +49,14 @@ const Table = ({
 
       <h3 id="table-header">{header}</h3>
 
-      <div className="table">
+    {header.includes("01") && (<div className="table">
         <p className="table__column-header">{column1}</p>
         <p className="table__column-header">{column2}</p>
         <p className="table__column-header">{column3}</p>
         <p className="table__column-header">{column4}</p>
         <p className="table__column-header">{column5}</p>
-      </div>
+      </div>) }
+      
     </div>
   );
 };

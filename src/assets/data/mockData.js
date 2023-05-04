@@ -136,15 +136,17 @@ const mockData = {
       manager: "John Walter",
       jobTitle: "Full Time Employee",
 
-      resources: {
-        resourceName: "notepad",
-        resourceId: 1,
-        quantity: 20,
-        autoPurchase: "YES",
-        constPerUnit: "£1.99",
-        autoPurchaseLevel: 10,
-        category: "admin",
-      },
+      resources: [
+        {
+          resourceName: "notepad",
+          resourceId: 1,
+          quantity: 20,
+          autoPurchase: "YES",
+          constPerUnit: "£1.99",
+          autoPurchaseLevel: 10,
+          category: "admin",
+        },
+      ],
     },
     {
       fullName: "John Smith",
