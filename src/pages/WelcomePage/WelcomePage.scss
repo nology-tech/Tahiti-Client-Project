@@ -79,3 +79,47 @@
   }
 }
 
+.displayMessage {
+  position: absolute;
+  top: 17%;
+  transform: translateY(-50%);
+  left: 450px;
+  max-width: 50%;
+  background-color: $color-secondary;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+
+  .heading {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: white;
+    //background-color: $color-secondary;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  button {
+    text-decoration: none;
+    padding:6px;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: $color-white-header;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-bottom:25px;
+  }
+
+}
+.displayMessage.hide {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+  
+
+  
