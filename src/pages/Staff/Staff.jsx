@@ -1,32 +1,57 @@
 import React from "react";
 import "./Staff.scss";
 import Table from "../../components/Table/Table";
-// import TableCard from "../../components/TableCard/TableCard";
 import mockData from "../../assets/data/mockData";
+import TableCard from "../../components/TableCard/TableCard";
 
 const Staff = () => {
-  const getData = mockData.bookingsData.map((booking, index) => {
-    return booking.practitioner;
-    // <div key={index}>
-    //   <h3 key={index} className="table-header">
-    //     {booking.bookingId.practitioner}
-    //   </h3>
-    //   {mockData.clientData.map((client, index) => {
-    //     return (
-    //       <TableCard
-    //         key={index}
-    //         item1={client.name}
-    //         item2={client.email}
-    //         item3={client.mobileNumber}
-    //         item4={booking.bookingId}
-    //         item5={booking.bookingTime}
-    //       />
-    //     );
-    //   })}
-    // </div>
+  const practitionerArr = mockData.bookingsData.map(
+    (booking) => booking.practitioner
+  );
+
+  const uniquePractitioner = practitionerArr.filter(
+    (prac, index) => practitionerArr.indexOf(prac) === index
+  );
+
+  const getClientBookingData = mockData.clientData.map((client) => {
+    return client.bookings.map((booking) => {
+      if (booking.practitioner.match(uniquePractitioner)) {
+        return (
+          <div>
+            <h3>{uniquePractitioner}</h3>
+            <TableCard
+              item1={client.name}
+              item2={client.email}
+              item3={client.mobileNumber}
+              item4={booking.bookingId}
+              item5={booking.bookingTime}
+            />
+          </div>
+        );
+      } else {
+        return;
+      }
+    });
   });
-  
-  console.log(getData);
+  console.log(practitionerArr);
+  console.log(uniquePractitioner);
+  // <div key={index}>
+  //   <h3 key={index} className="table-header">
+  //     {booking.bookingId.practitioner}
+  //   </h3>
+  //   {mockData.clientData.map((client, index) => {
+  //     return (
+  //       <TableCard
+  //         key={index}
+  //         item1={client.name}
+  //         item2={client.email}
+  //         item3={client.mobileNumber}
+  //         item4={booking.bookingId}
+  //         item5={booking.bookingTime}
+  //       />
+  //     );
+  //   })}
+  // </div>
 
   // const getData = mockData.clientData.map((client) => {
 
@@ -61,8 +86,8 @@ const Staff = () => {
           column4={"Booking date"}
           column5={"Booking time"}
         />
-        {getData}
       </div>
+      {getClientBookingData}
     </div>
   );
 };
