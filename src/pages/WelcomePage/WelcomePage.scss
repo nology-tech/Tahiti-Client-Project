@@ -78,3 +78,15 @@
     }
   }
 }
+
+/*
+<div>
+        {!isValid&&
+        <div className="displayMessage">
+          <h1 >
+          Please enter a valid email and password!
+          </h1>
+          <button onClick={hideMessage}>Try again</button></div>}
+      </div>
+
+      */

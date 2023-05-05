@@ -3,8 +3,35 @@ import "./WelcomePage.scss";
 import WelcomeImage from "../../assets/images/Background-img-welcome.svg";
 import Logo from "../../assets/images/logo black.svg";
 import LoginForm from "../../components/Forms/LoginForm/LoginForm";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import {auth} from "./firebase"
+import { useState, useEffect } from "react";
 
-const WelcomePage = ({email, password, submitForm, emailInput, passwordInput, isValid, hideMessage}) => {
+const WelcomePage = ({email, password, submitForm, emailInput, passwordInput, userCredential}) => {
+
+  const [user, setUser]=useState({})
+
+  const getUser = (email, password)=> {
+    signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    setUser(userCredential.user)
+    
+    // ...
+  })
+  .catch((error) => {
+    //const errorCode = error.code;
+    //const errorMessage = error.message;
+    // ..
+    console.log(error)
+  });
+  }
+
+  useEffect(()=>{
+    getUser("mbirchall@gmail.com", "nology123");
+  },[])
+
+
   return (
     <div className="container">
       <div className="logo-container">
@@ -27,14 +54,7 @@ const WelcomePage = ({email, password, submitForm, emailInput, passwordInput, is
         className="picture-main"
         alt="blurry image of a class"
       />
-      <div>
-        {!isValid&&
-        <div className="displayMessage">
-          <h1 >
-          Please enter a valid email and password!
-          </h1>
-          <button onClick={hideMessage}>Try again</button></div>}
-      </div>
+      
     </div>
   );
 };
