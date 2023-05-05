@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 const WelcomePage = ({ setUser }) => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   const getUser = () => {
@@ -24,8 +25,14 @@ const WelcomePage = ({ setUser }) => {
       })
       .catch((error) => {
         console.log("this isnt working", error);
-        alert("this isnt working!");
+        setError(!error);
       });
+  };
+
+  const showError = () => {
+    if (!user) {
+      setError(true);
+    }
   };
 
   return (
@@ -48,6 +55,14 @@ const WelcomePage = ({ setUser }) => {
           />
           <button onClick={getUser}>Log in</button>
         </div>
+      </div>
+      <div>
+        {showError && (
+          <div className="displayMessage">
+            <h1>❌Please enter a valid email and password!</h1>
+            <button onClick={hideMessage}>Try again</button>
+          </div>
+        )}
       </div>
 
       <img
