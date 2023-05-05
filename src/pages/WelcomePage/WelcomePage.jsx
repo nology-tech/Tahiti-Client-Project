@@ -8,7 +8,7 @@ import { auth } from "../../firebase";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const WelcomePage = ({ user, setUser }) => {
+const WelcomePage = ({ setUser }) => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState(false);
@@ -17,11 +17,8 @@ const WelcomePage = ({ user, setUser }) => {
   const getUser = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const currentUser = userCredential.user;
-        if (currentUser) {
-          setUser(user);
-          navigate("/home");
-        }
+        setUser(userCredential.user);
+        navigate("/home");
       })
       .catch((error) => {
         console.log(error);
@@ -29,9 +26,9 @@ const WelcomePage = ({ user, setUser }) => {
       });
   };
 
-  const hideError=()=> {
-    setErrorMessage(!errorMessage)
-  }
+  const hideError = () => {
+    setErrorMessage(!errorMessage);
+  };
 
   return (
     <div className="container">
@@ -59,10 +56,12 @@ const WelcomePage = ({ user, setUser }) => {
         className="picture-main"
         alt="blurry image of a class"
       />
-      <div> 
+      <div>
         {errorMessage && (
           <div className="displayMessage">
-            <h1 className="heading">❌Please enter a valid email and password!</h1>
+            <h1 className="heading">
+              ❌Please enter a valid email and password!
+            </h1>
             <button onClick={hideError}>Try again</button>
           </div>
         )}

@@ -20,28 +20,34 @@ const App = () => {
   const [user, setUser] = useState();
 
   return (
-    <Routes>
-      <Route path="/" element={<WelcomePage setUser={setUser} user={user}/>} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/booking" element={<Booking />} />
-      <Route path="/staff" element={<Staff />} />
-      <Route
-        path="/staff-booking-active/:clientId"
-        element={<StaffBookingActive />}
-      />
-      <Route
-        path="/staff-edit-client/:clientId"
-        element={<StaffEditClient />}
-      />
-      <Route path="/clients" element={<Clients />} />
-      <Route path="/client-active/:clientId" element={<ClientActive />} />
-      <Route path="/client-new" element={<NewClient />} />
-      <Route path="/client-edit/:clientId" element={<EditClient />} />
-      <Route path="/resources" element={<Resources />} />
-      <Route path="/edit-resources" element={<EditResources />} />
-      <Route path="/request-resources" element={<RequestResources />} />
-      <Route path="/settings" element={<Settings />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<WelcomePage setUser={setUser} />} />
+      </Routes>
+      {user && (
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/staff" element={<Staff />} />
+          <Route
+            path="/staff-booking-active/:clientId"
+            element={<StaffBookingActive />}
+          />
+          <Route
+            path="/staff-edit-client/:clientId"
+            element={<StaffEditClient />}
+          />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/client-active/:clientId" element={<ClientActive />} />
+          <Route path="/client-new" element={<NewClient />} />
+          <Route path="/client-edit/:clientId" element={<EditClient />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/edit-resources" element={<EditResources />} />
+          <Route path="/request-resources" element={<RequestResources />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      )}
+    </>
   );
 };
 
