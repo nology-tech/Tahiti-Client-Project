@@ -3,6 +3,7 @@ import "./WelcomePage.scss";
 import WelcomeImage from "../../assets/images/Background-img-welcome.svg";
 import Logo from "../../assets/images/logo black.svg";
 import LoginForm from "../../components/Forms/LoginForm/LoginForm";
+import Button from "../../components/Button/Button";
 
 const WelcomePage = () => {
   return (
@@ -18,7 +19,7 @@ const WelcomePage = () => {
             treatments that will make you look like you are 18 again!
           </p>
           <LoginForm />
-          <button>Log in</button>
+          <Button className="button-welcome" name="Log In" image={""} />
         </div>
       </div>
 
