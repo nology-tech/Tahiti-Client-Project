@@ -5,35 +5,28 @@ import Logo from "../../assets/images/logo black.svg";
 import LoginForm from "../../components/Forms/LoginForm/LoginForm";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
-import { useEffect } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const WelcomePage = ({
-  email,
-  password,
-  submitForm,
-  emailInput,
-  passwordInput,
-  setUser,
-}) => {
-  const getUser = (email, password) => {
+const WelcomePage = ({ setUser }) => {
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
+
+  const getUser = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        setUser(userCredential.user);
-        console.log(userCredential.user);
-
-        // ...
+        const user = userCredential.user;
+        if (user) {
+          setUser(user);
+          navigate("/home");
+        }
       })
       .catch((error) => {
-        //const errorCode = error.code;
-        //const errorMessage = error.message;
-        // ..
-        console.log(error);
+        console.log("this isnt working", error);
+        alert("this isnt working!");
       });
   };
-
-  useEffect(() => {
-    getUser(email, password);
-  }, []);
 
   return (
     <div className="container">
@@ -50,10 +43,10 @@ const WelcomePage = ({
           <LoginForm
             password={password}
             email={email}
-            emailInput={emailInput}
-            passwordInput={passwordInput}
+            emailInput={setEmail}
+            passwordInput={setPassword}
           />
-          <button onClick={submitForm}>Log in</button>
+          <button onClick={getUser}>Log in</button>
         </div>
       </div>
 
