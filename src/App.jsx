@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-
 import "./styles/main.scss";
 import Booking from "../src/pages/Booking/Booking";
 import ClientActive from "../src/pages/ClientActive/ClientActive";
@@ -16,16 +15,13 @@ import StaffBookingActive from "../src/pages/StaffBookingActive/StaffBookingActi
 import StaffEditClient from "../src/pages/StaffEditClient/StaffEditClient";
 import WelcomePage from "../src/pages/WelcomePage/WelcomePage";
 import { useState } from "react";
-import "./App.scss";
 
 const App = () => {
   const [user, setUser] = useState();
 
-  console.log(user);
-
   return (
     <Routes>
-      <Route path="/" element={<WelcomePage setUser={setUser} />} />
+      <Route path="/" element={<WelcomePage setUser={setUser} user={user}/>} />
       <Route path="/home" element={<Home />} />
       <Route path="/booking" element={<Booking />} />
       <Route path="/staff" element={<Staff />} />

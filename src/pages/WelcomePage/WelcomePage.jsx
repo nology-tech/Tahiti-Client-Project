@@ -8,7 +8,7 @@ import { auth } from "../../firebase";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const WelcomePage = ({ setUser }) => {
+const WelcomePage = ({ user, setUser }) => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState(false);
@@ -17,14 +17,14 @@ const WelcomePage = ({ setUser }) => {
   const getUser = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const user = userCredential.user;
-        if (user) {
+        const currentUser = userCredential.user;
+        if (currentUser) {
           setUser(user);
           navigate("/home");
         }
       })
       .catch((error) => {
-        console.log("this isnt working", error);
+        console.log(error);
         setErrorMessage(!errorMessage);
       });
   };
@@ -54,8 +54,6 @@ const WelcomePage = ({ setUser }) => {
           <button onClick={getUser}>Log in</button>
         </div>
       </div>
-      
-
       <img
         src={WelcomeImage}
         className="picture-main"
