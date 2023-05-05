@@ -32,7 +32,7 @@ const App = () => {
     setEmail(event.target.value);
   };
   const submitForm = () => {
-    if (user) {
+    if (email === user.email) {
       navigate("/home");
     }
   };

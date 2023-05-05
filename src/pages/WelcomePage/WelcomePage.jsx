@@ -32,7 +32,7 @@ const WelcomePage = ({
   };
 
   useEffect(() => {
-    getUser("mbirchall@gmail.com", "nology123");
+    getUser(email, password);
   }, []);
 
   return (
