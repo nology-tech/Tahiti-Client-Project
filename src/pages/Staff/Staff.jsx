@@ -5,78 +5,27 @@ import mockData from "../../assets/data/mockData";
 import TableCard from "../../components/TableCard/TableCard";
 
 const Staff = () => {
-  const practitionerArr = mockData.bookingsData.map(
-    (booking) => booking.practitioner
-  );
-
-  const uniquePractitioner = practitionerArr.filter(
-    (prac, index) => practitionerArr.indexOf(prac) === index
-  );
-
-  const getClientBookingData = mockData.clientData.map((client) => {
-    return client.bookings.map((booking) => {
-      if (booking.practitioner.match(uniquePractitioner)) {
-        return (
-          <div>
-            <h3>{uniquePractitioner}</h3>
-            <TableCard
-              item1={client.name}
-              item2={client.email}
-              item3={client.mobileNumber}
-              item4={booking.bookingId}
-              item5={booking.bookingTime}
-            />
-          </div>
-        );
-      } else {
-        return;
-      }
+  const getData = mockData.clientData.map((client) => {
+    return client.bookings.map((booking, index) => {
+      return (
+        <div key={index}>
+          <TableCard
+            key={index + 1}
+            item1={client.name}
+            item2={client.email}
+            item3={client.mobileNumber}
+            item4={booking.bookingDate}
+            item5={booking.bookingTime}
+          />
+        </div>
+      );
     });
   });
-  console.log(practitionerArr);
-  console.log(uniquePractitioner);
-  // <div key={index}>
-  //   <h3 key={index} className="table-header">
-  //     {booking.bookingId.practitioner}
-  //   </h3>
-  //   {mockData.clientData.map((client, index) => {
-  //     return (
-  //       <TableCard
-  //         key={index}
-  //         item1={client.name}
-  //         item2={client.email}
-  //         item3={client.mobileNumber}
-  //         item4={booking.bookingId}
-  //         item5={booking.bookingTime}
-  //       />
-  //     );
-  //   })}
-  // </div>
-
-  // const getData = mockData.clientData.map((client) => {
-
-  //   return client.bookings.map((booking, index) => {
-  //     return (
-  //       <div key={index}>
-  //         <h3 className="table-header" key={index}>
-  //           {booking.practitioner}
-  //         </h3>
-
-  //         <TableCard
-  //           key={index + 1}
-  //           item1={client.name}
-  //           item2={client.email}
-  //           item3={client.mobileNumber}
-  //           item4={booking.bookingDate}
-  //           item5={booking.bookingTime}
-  //         />
-  //       </div>
-  //     );
-  //   });
-  // });
+  // A sorting functionality needed for filtering a clients for each member of staffs
 
   return (
     <div className="staff-page">
+      <h2>This is staff page</h2>
       <div>
         <Table
           title={"Staff bookings"}
@@ -87,7 +36,8 @@ const Staff = () => {
           column5={"Booking time"}
         />
       </div>
-      {getClientBookingData}
+
+      {getData}
     </div>
   );
 };
