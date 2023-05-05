@@ -4,33 +4,36 @@ import WelcomeImage from "../../assets/images/Background-img-welcome.svg";
 import Logo from "../../assets/images/logo black.svg";
 import LoginForm from "../../components/Forms/LoginForm/LoginForm";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import {auth} from "./firebase"
-import { useState, useEffect } from "react";
+import { auth } from "../../firebase";
+import { useEffect } from "react";
 
-const WelcomePage = ({email, password, submitForm, emailInput, passwordInput, userCredential}) => {
-
-  const [user, setUser]=useState({})
-
-  const getUser = (email, password)=> {
+const WelcomePage = ({
+  email,
+  password,
+  submitForm,
+  emailInput,
+  passwordInput,
+  setUser,
+}) => {
+  const getUser = (email, password) => {
     signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    setUser(userCredential.user)
-    
-    // ...
-  })
-  .catch((error) => {
-    //const errorCode = error.code;
-    //const errorMessage = error.message;
-    // ..
-    console.log(error)
-  });
-  }
+      .then((userCredential) => {
+        setUser(userCredential.user);
+        console.log(userCredential.user);
 
-  useEffect(()=>{
+        // ...
+      })
+      .catch((error) => {
+        //const errorCode = error.code;
+        //const errorMessage = error.message;
+        // ..
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
     getUser("mbirchall@gmail.com", "nology123");
-  },[])
-
+  }, []);
 
   return (
     <div className="container">
@@ -44,7 +47,12 @@ const WelcomePage = ({email, password, submitForm, emailInput, passwordInput, us
             Welcome to New You clinic where we provide world class beauty
             treatments that will make you look like you are 18 again!
           </p>
-          <LoginForm password={password} email={email} emailInput={emailInput} passwordInput={passwordInput}/>
+          <LoginForm
+            password={password}
+            email={email}
+            emailInput={emailInput}
+            passwordInput={passwordInput}
+          />
           <button onClick={submitForm}>Log in</button>
         </div>
       </div>
@@ -54,7 +62,6 @@ const WelcomePage = ({email, password, submitForm, emailInput, passwordInput, us
         className="picture-main"
         alt="blurry image of a class"
       />
-      
     </div>
   );
 };

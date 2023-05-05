@@ -16,44 +16,42 @@ import StaffBookingActive from "../src/pages/StaffBookingActive/StaffBookingActi
 import StaffEditClient from "../src/pages/StaffEditClient/StaffEditClient";
 import WelcomePage from "../src/pages/WelcomePage/WelcomePage";
 import { useState } from "react";
-//import { useNavigate } from "react-router-dom";
-import "./App.scss"
-
-
-
+import { useNavigate } from "react-router-dom";
+import "./App.scss";
 
 const App = () => {
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [user, setUser] = useState();
+  const navigate = useNavigate();
 
-  const [password, setPassword]=useState("")
-  const [email, setEmail]=useState("")
-  //const [isValid, setIsValid]=useState(true)
-
-
-  //const navigate = useNavigate()
-
-  //const submitForm = (event)=> {
-    //if (user.email&&user.password) {
-      
-    //}
-  //}
-
-  //const hideMessage = ()=> {
-    //setIsValid(!isValid)
-    
-  //}
-
-console.log(userCredential)
-  const passwordInput = (event)=> {
-    setPassword(event.target.value)
-  }
-
-  const emailInput = (event)=> {
-    setEmail(event.target.value)
-  }
-
+  const passwordInput = (event) => {
+    setPassword(event.target.value);
+  };
+  const emailInput = (event) => {
+    setEmail(event.target.value);
+  };
+  const submitForm = () => {
+    if (user) {
+      navigate("/home");
+    }
+  };
   return (
     <Routes>
-      <Route path="/" element={<WelcomePage password={password} email={email} passwordInput={passwordInput} emailInput={emailInput} userCredential={userCredential}  />} />
+      <Route
+        path="/"
+        element={
+          <WelcomePage
+            password={password}
+            email={email}
+            passwordInput={passwordInput}
+            emailInput={emailInput}
+            user={user}
+            setUser={setUser}
+            submitForm={submitForm}
+          />
+        }
+      />
       <Route path="/home" element={<Home />} />
       <Route path="/booking" element={<Booking />} />
       <Route path="/staff" element={<Staff />} />
