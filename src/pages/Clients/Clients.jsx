@@ -3,6 +3,7 @@ import "./Clients.scss";
 import Table from "../../components/Table/Table";
 import mockData from "../../assets/data/mockData.js";
 import TableCard from "../../components/TableCard/TableCard";
+import SideNav from "../../components/SideNav/SideNav";
 
 const Clients = () => {
   const getClientsData = mockData.clientData.map((client, index) => {
@@ -23,6 +24,7 @@ const Clients = () => {
   return (
     <div className="clients-container">
       This is the heading
+      <SideNav />
       <Table
         title={"Clients List"}
         column1={"Client Name"}

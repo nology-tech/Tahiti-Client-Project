@@ -3,6 +3,7 @@ import "./Staff.scss";
 import Table from "../../components/Table/Table";
 import mockData from "../../assets/data/mockData";
 import TableCard from "../../components/TableCard/TableCard";
+import SideNav from "../../components/SideNav/SideNav";
 
 const Staff = () => {
   const getData = mockData.clientData.map((client) => {
@@ -27,6 +28,7 @@ const Staff = () => {
     <div className="staff-page">
       <h2>This is staff page</h2>
       <div>
+        <SideNav />
         <Table
           title={"Staff bookings"}
           column1={"Client name"}

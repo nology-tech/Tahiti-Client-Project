@@ -3,6 +3,7 @@ import "./Resources.scss";
 import mockData from "../../assets/data/mockData";
 import Table from "../../components/Table/Table";
 import TableCard from "../../components/TableCard/TableCard";
+import SideNav from "../../components/SideNav/SideNav";
 
 const Resources = () => {
   const getData = mockData.staffData.map((staff, index) => {
@@ -30,6 +31,8 @@ const Resources = () => {
   return (
     <div className="resources">
       <h1>This is a resources page</h1>
+
+      <SideNav />
       <Table
         title={"Health Products"}
         column1={"Resource Name"}
