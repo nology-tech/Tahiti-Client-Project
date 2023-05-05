@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const WelcomePage = ({ setUser }) => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
   const navigate = useNavigate();
 
   const getUser = () => {
@@ -25,15 +25,13 @@ const WelcomePage = ({ setUser }) => {
       })
       .catch((error) => {
         console.log("this isnt working", error);
-        setError(!error);
+        setErrorMessage(!errorMessage);
       });
   };
 
-  const showError = () => {
-    if (!user) {
-      setError(true);
-    }
-  };
+  const hideError=()=> {
+    setErrorMessage(!errorMessage)
+  }
 
   return (
     <div className="container">
@@ -56,20 +54,21 @@ const WelcomePage = ({ setUser }) => {
           <button onClick={getUser}>Log in</button>
         </div>
       </div>
-      <div>
-        {showError && (
-          <div className="displayMessage">
-            <h1>❌Please enter a valid email and password!</h1>
-            <button onClick={hideMessage}>Try again</button>
-          </div>
-        )}
-      </div>
+      
 
       <img
         src={WelcomeImage}
         className="picture-main"
         alt="blurry image of a class"
       />
+      <div> 
+        {errorMessage && (
+          <div className="displayMessage">
+            <h1 className="heading">❌Please enter a valid email and password!</h1>
+            <button onClick={hideError}>Try again</button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
