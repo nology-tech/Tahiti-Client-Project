@@ -1,0 +1,35 @@
+*{
+    font-family: Poppins;
+}
+
+.infocard{
+    border: 1px solid white;
+    padding: 20px;
+    width: 294px;
+    height: 307px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    &__heading{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    &__paragraph{
+        font-size: 10px;
+        color: #95ACCB;
+        margin: 0px;
+    }
+    
+    &__subheading{
+        font-size: 10px;
+        color: #102B3F;
+        margin: 0px;
+    }
+        
+}
+      
+
+
+
