@@ -1,4 +1,63 @@
 const mockData = {
+  bookingsData: [
+    {
+      bookingId: 1,
+      client: "Felix Tompson",
+      practitioner: "John Smith",
+      bookingDate: "12/12/2023",
+      bookingTime: "12:30",
+    },
+    {
+      bookingId: 2,
+      client: "Sarah Johnson",
+      practitioner: "John Smith",
+      bookingDate: "01/01/2023",
+      bookingTime: "10:00",
+    },
+    {
+      bookingId: 3,
+      client: "David Lee",
+      practitioner: "Tom Tompson",
+      bookingDate: "06/06/2023",
+      bookingTime: "14:00",
+    },
+    {
+      bookingId: 4,
+      client: "Emma Wilson",
+      practitioner: "Jane Dory",
+      bookingDate: "08/08/2023",
+      bookingTime: "16:00",
+    },
+    {
+      bookingId: 5,
+      client: "Emma Wilson",
+      practitioner: "Amy Johnson",
+      bookingDate: "02/02/2023",
+      bookingTime: "09:30",
+    },
+    {
+      bookingId: 6,
+      client: "Oliver Green",
+      practitioner: "Mike Williams",
+      bookingDate: "07/07/2023",
+      bookingTime: "11:00",
+    },
+    {
+      bookingId: 7,
+      client: "Sophie Brown",
+      practitioner: "Mike Williams",
+      bookingDate: "07/07/2023",
+      bookingTime: "11:30",
+    },
+    {
+      bookingId: 8,
+      client: "James Taylor",
+      practitioner: "Amy Johnson",
+      bookingDate: "04/04/2023",
+      bookingTime: "13:00",
+    },
+  ],
+
   clientData: [
     {
       name: "Felix Tompson",
@@ -8,7 +67,6 @@ const mockData = {
       dateOfBirth: "12/12/1997",
       email: "felixtompson@gmail.com",
       mobileNumber: "+44 745455097",
-      practitioner: "Jane Dow",
 
       bookings: [
         {
