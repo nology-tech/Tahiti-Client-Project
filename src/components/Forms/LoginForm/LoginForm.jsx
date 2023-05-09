@@ -27,8 +27,10 @@ const LoginForm = ({ email, password, emailInput, passwordInput }) => {
         type="text"
         value={email}
       />
-      <div className="form-container__error">
-        {emailErrorMessage && <p>Your email must be valid...</p>}
+      <div>
+        {emailErrorMessage && (
+          <p className="form-container__error">Your email must be valid...</p>
+        )}
       </div>
 
       <label className="form-container__label">Password</label>
