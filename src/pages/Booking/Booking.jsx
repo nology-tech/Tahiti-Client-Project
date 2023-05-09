@@ -1,11 +1,12 @@
 import React from "react";
 import "./Booking.scss";
 import SideNav from "../../components/SideNav/SideNav";
+import TopNav from '../../components/TopNav/TopNav'
 
 const Booking = () => {
   return (
     <div>
-      <h1>Booking</h1>
+      <TopNav heading ="Book Appointment" buttonTitle ="+ Edit" showButton={false}/>
       <SideNav/>
     </div>
   )

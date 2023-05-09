@@ -1,11 +1,12 @@
 import React from "react";
 import "./RequestResources.scss";
 import SideNav from "../../components/SideNav/SideNav";
+import TopNav from "../../components/TopNav/TopNav"
 
 const RequestResources = () => {
   return (
   <div>
-    <h1>RequestResources</h1>
+    <TopNav heading ="Request Resource" buttonTitle ="+ Edit" showButton={false}/>
     <SideNav/> 
   </div>
   )

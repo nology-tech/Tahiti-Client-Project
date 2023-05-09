@@ -2,6 +2,7 @@ import "./Home.scss";
 import SideNav from "../../components/SideNav/SideNav";
 import MobileNavPage from "../../components/MobileNavPage/MobileNavPage";
 import HompageCard from "../../components/HomepageCard/HomepageCard";
+import TopNav from "../../components/TopNav/TopNav";
 
 const Home = () => {
   return (
@@ -9,8 +10,8 @@ const Home = () => {
       <div className="desktopNav">
         <SideNav />
       </div>
-      <div className="mockHeader">
-        <h1>Home</h1>
+      <div className="topnav-container">
+        <TopNav heading ="Home" buttonTitle ="+ Edit" showButton={false}/>
       </div>
       <div className="cardContainer">
         <HompageCard title="New Appointment" link="/booking" />

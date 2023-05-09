@@ -1,11 +1,12 @@
 import React from "react";
 import "./NewClient.scss";
 import SideNav from "../../components/SideNav/SideNav";
+import TopNav from "../../components/TopNav/TopNav";
 
 const NewClient = () => {
   return (
   <div>
-    <h1>NewClient</h1>
+    <TopNav heading ="Add Client" buttonTitle ="Save" showButton={true}/>
     <SideNav/>
   </div>
   )
