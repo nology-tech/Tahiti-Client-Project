@@ -81,7 +81,7 @@
 
 .displayMessage {
   position: absolute;
-  top: 17%;
+  top: 50%;
   transform: translateY(-50%);
   left: 450px;
   max-width: 50%;
@@ -105,20 +105,17 @@
 
   button {
     text-decoration: none;
-    padding:6px;
+    padding: 6px;
     font-size: 22px;
     font-weight: 600;
     background-color: $color-white-header;
     border: 2px solid white;
     border-radius: 5px;
-    margin-bottom:25px;
+    margin-bottom: 25px;
+    cursor: pointer;
   }
-
 }
 .displayMessage.hide {
   opacity: 0;
   transition: opacity 2s ease-in-out;
 }
-  
-
-  
