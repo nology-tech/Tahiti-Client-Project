@@ -16,15 +16,11 @@ const Home = () => {
         </div>
 
         <div className="rowContainer">
-          <div className="firstRow">
-            <HompageCard title="New Appointment" link="/booking" />
-            <HompageCard title="Staff Details" link="/staff" />
-            <HompageCard title="Client Details" link="clients" />
-          </div>
-          <div className="secondRow">
-            <HompageCard title="Resources" link="/resources" />
-            <HompageCard title="Settings" link="/settings" />
-          </div>
+          <HompageCard title="New Appointment" link="/booking" />
+          <HompageCard title="Staff Details" link="/staff" />
+          <HompageCard title="Client Details" link="clients" />
+          <HompageCard title="Resources" link="/resources" />
+          <HompageCard title="Settings" link="/settings" />
         </div>
       </div>
       <MobileNavPage />
