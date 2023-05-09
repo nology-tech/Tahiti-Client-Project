@@ -1,4 +1,4 @@
-@use "/src/styles/variables.scss" as *;
+@use "/src/styles/_variables.scss" as *;
 @use "/src/styles/_typography.scss" as *;
 @use "../../components/Button/Button.scss" as *;
 
@@ -30,7 +30,6 @@
         text-align: center;
       }
       p {
-        color: $text-black;
         text-align: center;
         opacity: 80%;
         font-size: 14px;
@@ -78,4 +77,45 @@
       opacity: 10%;
     }
   }
+}
+
+.displayMessage {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 450px;
+  max-width: 50%;
+  background-color: $color-secondary;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+
+  .heading {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  button {
+    text-decoration: none;
+    padding: 6px;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: $color-white-header;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    cursor: pointer;
+  }
+}
+.displayMessage.hide {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
 }

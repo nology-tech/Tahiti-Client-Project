@@ -2,7 +2,7 @@ import React from "react";
 import "./Button.scss";
 import Plus from "../../assets/images/plus-icon-save-button.svg";
 
-const Button = ({ name, variant, image }) => {
+const Button = ({ name, variant, image, onClick }) => {
   let buttonStyle = "button";
 
   switch (variant) {
@@ -23,7 +23,9 @@ const Button = ({ name, variant, image }) => {
   return (
     <div>
       {image && <img className="plusButton" src={Plus} alt="plus-arrow" />}
-      <button className={buttonStyle}>{name}</button>
+      <button className={buttonStyle} onClick={onClick}>
+        {name}
+      </button>
     </div>
   );
 };

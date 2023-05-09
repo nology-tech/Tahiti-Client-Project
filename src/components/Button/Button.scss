@@ -4,11 +4,12 @@
   border-radius: 7px;
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 .yellowWide {
   margin-top: 30px;
-  width: 410px;
+  width: 392px;
   background-color: $color-buttonPrimary;
 }
 
@@ -39,4 +40,10 @@
   left: 1215px;
   top: 77.5px;
   z-index: 999;
+}
+
+@media screen and (max-width: 324px) {
+  .yellowWide {
+    width: 243px;
+  }
 }
