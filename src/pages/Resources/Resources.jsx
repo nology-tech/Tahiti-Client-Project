@@ -16,6 +16,7 @@ const Resources = () => {
         {staff.resources.map((resource, index) => {
           return (
             <TableCard
+              className="table-card"
               key={index}
               item1={resource.resourceName}
               item2={resource.quantity}
@@ -35,7 +36,10 @@ const Resources = () => {
         {mockData.staffData.map((staff, index) => {
           return (
             <>
-              <h3 className="mobile-table-header" key={staff.staffNumber + index}>
+              <h3
+                className="mobile-table-header"
+                key={staff.staffNumber + index}
+              >
                 Staff 0{staff.staffNumber}
               </h3>
               {staff.resources.map((resource, index) => {
@@ -46,20 +50,20 @@ const Resources = () => {
             </>
           );
         })}
+      </div>
 
-        <div className="desktop__container">
-          <SideNav />
-          <div className="resources__container--right">
-            <Table
-              title={"Health Products"}
-              column1={"Resource Name"}
-              column2={"Quantity Remaining"}
-              column3={"Cost per unit"}
-              column4={"Auto-Purchase"}
-              column5={"Auto-Purchase Level"}
-            />
-            {getData}
-          </div>
+      <div className="desktop__container">
+        <SideNav />
+        <div className="desktop__container--right">
+          <Table
+            title={"Health Products"}
+            column1={"Resource Name"}
+            column2={"Quantity Remaining"}
+            column3={"Cost per unit"}
+            column4={"Auto-Purchase"}
+            column5={"Auto-Purchase Level"}
+          />
+          <div className="data-wrap">{getData}</div>
         </div>
       </div>
     </div>

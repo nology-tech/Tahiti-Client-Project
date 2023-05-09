@@ -4,6 +4,7 @@ import Table from "../../components/Table/Table";
 import mockData from "../../assets/data/mockData";
 import TableCard from "../../components/TableCard/TableCard";
 import SideNav from "../../components/SideNav/SideNav";
+import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
 
 const Staff = () => {
   const getData = mockData.clientData.map((client) => {
@@ -26,6 +27,11 @@ const Staff = () => {
 
   return (
     <div className="staff-page">
+      <div className="staff-page__mobile">
+        {mockData.staffData.map((staff, index) => {
+          return <MobileNavButton key={index} name={staff.fullName} />;
+        })}
+      </div>
       <div className="staff-page__page">
         <SideNav />
         <div className="staff-page__page--rightside">
@@ -37,7 +43,8 @@ const Staff = () => {
             column4={"Booking date"}
             column5={"Booking time"}
           />
-          {getData}
+          <div className="staff-wrap">{getData}</div>
+          
         </div>
       </div>
     </div>

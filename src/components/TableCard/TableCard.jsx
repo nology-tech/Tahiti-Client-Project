@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./TableCard.scss";
 
 const TableCard = ({ item1, item2, item3, item4, item5 }) => {
@@ -10,7 +11,9 @@ const TableCard = ({ item1, item2, item3, item4, item5 }) => {
         <p className="data-row__item">{item3}</p>
         <p className="data-row__item--fourth">{item4}</p>
         <p className="data-row__item">{item5}</p>
-        <p className="right-arrow">&gt;</p>
+        <Link to="/home">
+          <p className="right-arrow">&gt;</p>
+        </Link>
       </div>
     </>
   );

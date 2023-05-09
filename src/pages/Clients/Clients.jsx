@@ -40,7 +40,8 @@ const Clients = () => {
             column4={"mobile number"}
             column5={"practitioner"}
           />
-          {getClientsData}
+          <div className="client-wrap">{getClientsData}</div>
+          
         </div>
       </div>
     </div>

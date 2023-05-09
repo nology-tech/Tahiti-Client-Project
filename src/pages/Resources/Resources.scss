@@ -2,15 +2,22 @@
   background-color: #ebebf5;
 
   &__container {
-    display: flex;
-
-    &--right {
-      width: 100%;
-    }
+    display: none;
   }
 
   .desktop__container {
-    display: none;
+    display: flex;
+    height: 100vh;
+
+    &--right {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .data-wrap {
+    overflow-y: auto;
+    height: 400px;
   }
 }
 
@@ -24,13 +31,12 @@
 
 @media screen and (max-width: 720px) {
   .resources__container {
+    display: unset;
     padding-top: 100px;
-    padding-bottom: 100px;
     flex-direction: column;
     width: 100%;
-    &--right {
-      display: none;
-    }
+    overflow: scroll;
+
     .mobile-table-header {
       width: auto;
       display: flex;
@@ -40,8 +46,15 @@
       font-size: 14px;
       font-weight: bold;
       margin-top: 5px;
-
-      overflow: auto;
     }
+  }
+  .desktop__container {
+    &--right {
+      display: none;
+    }
+  }
+
+  .resources {
+    padding-top: 100px;
   }
 }
