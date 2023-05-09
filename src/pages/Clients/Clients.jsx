@@ -33,7 +33,7 @@ const Clients = () => {
         <SideNav />
         <div className="clients-container__page--rightside">
           <Table
-            title={"Clients List"}
+            title= {"Clients List"}
             column1={"Client Name"}
             column2={"date of birth"}
             column3={"email address"}

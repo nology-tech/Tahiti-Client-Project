@@ -4,7 +4,6 @@
 .clients-container {
   background-color: #ebebf5;
   height: 100vh;
-  padding-top: 100px;
 
   &__mobile {
     display: none;
@@ -22,12 +21,14 @@
 
 @media screen and (max-width: 720px) {
   .clients-container {
+    padding-top: 100px;
     &__mobile {
       display: unset;
     }
 
     &__page {
       &--rightside {
+        width: 100%;
         display: none;
       }
     }
