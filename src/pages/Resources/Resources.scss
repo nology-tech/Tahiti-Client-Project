@@ -8,6 +8,10 @@
       width: 100%;
     }
   }
+
+  .desktop__container {
+    display: none;
+  }
 }
 
 .table-header {
@@ -16,4 +20,28 @@
   font-size: 14px;
   font-weight: bold;
   margin-top: 5px;
+}
+
+@media screen and (max-width: 720px) {
+  .resources__container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    flex-direction: column;
+    width: 100%;
+    &--right {
+      display: none;
+    }
+    .mobile-table-header {
+      width: auto;
+      display: flex;
+      justify-content: start;
+      margin-left: 50px;
+      color: #95accb;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 5px;
+
+      overflow: auto;
+    }
+  }
 }

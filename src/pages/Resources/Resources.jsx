@@ -4,6 +4,7 @@ import mockData from "../../assets/data/mockData";
 import Table from "../../components/Table/Table";
 import TableCard from "../../components/TableCard/TableCard";
 import SideNav from "../../components/SideNav/SideNav";
+import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
 
 const Resources = () => {
   const getData = mockData.staffData.map((staff, index) => {
@@ -31,17 +32,34 @@ const Resources = () => {
   return (
     <div className="resources">
       <div className="resources__container">
-        <SideNav />
-        <div className="resources__container--right">
-          <Table
-            title={"Health Products"}
-            column1={"Resource Name"}
-            column2={"Quantity Remaining"}
-            column3={"Cost per unit"}
-            column4={"Auto-Purchase"}
-            column5={"Auto-Purchase Level"}
-          />
-          {getData}
+        {mockData.staffData.map((staff, index) => {
+          return (
+            <>
+              <h3 className="mobile-table-header" key={staff.staffNumber + index}>
+                Staff 0{staff.staffNumber}
+              </h3>
+              {staff.resources.map((resource, index) => {
+                return (
+                  <MobileNavButton key={index} name={resource.resourceName} />
+                );
+              })}
+            </>
+          );
+        })}
+
+        <div className="desktop__container">
+          <SideNav />
+          <div className="resources__container--right">
+            <Table
+              title={"Health Products"}
+              column1={"Resource Name"}
+              column2={"Quantity Remaining"}
+              column3={"Cost per unit"}
+              column4={"Auto-Purchase"}
+              column5={"Auto-Purchase Level"}
+            />
+            {getData}
+          </div>
         </div>
       </div>
     </div>
