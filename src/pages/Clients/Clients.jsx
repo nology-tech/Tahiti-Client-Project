@@ -23,17 +23,20 @@ const Clients = () => {
 
   return (
     <div className="clients-container">
-      This is the heading
-      <SideNav />
-      <Table
-        title={"Clients List"}
-        column1={"Client Name"}
-        column2={"date of birth"}
-        column3={"email address"}
-        column4={"mobile number"}
-        column5={"practitioner"}
-      />
-      {getClientsData}
+      <div className="clients-container__page">
+        <SideNav />
+        <div className="clients-container__page--rightside">
+          <Table
+            title={"Clients List"}
+            column1={"Client Name"}
+            column2={"date of birth"}
+            column3={"email address"}
+            column4={"mobile number"}
+            column5={"practitioner"}
+          />
+          {getClientsData}
+        </div>
+      </div>
     </div>
   );
 };

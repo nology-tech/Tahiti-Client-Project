@@ -1,5 +1,13 @@
 .resources {
   background-color: #ebebf5;
+
+  &__container {
+    display: flex;
+
+    &--right {
+      width: 100%;
+    }
+  }
 }
 
 .table-header {

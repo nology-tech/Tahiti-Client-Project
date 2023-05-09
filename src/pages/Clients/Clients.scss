@@ -3,4 +3,14 @@
 
 .clients-container {
   background-color: #ebebf5;
+  height: 100vh;
+
+  &__page {
+    display: flex;
+    height: 100%;
+
+    &--rightside {
+      width: 100%;
+    }
+  }
 }

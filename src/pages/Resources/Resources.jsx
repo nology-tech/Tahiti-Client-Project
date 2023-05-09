@@ -30,18 +30,20 @@ const Resources = () => {
 
   return (
     <div className="resources">
-      <h1>This is a resources page</h1>
-
-      <SideNav />
-      <Table
-        title={"Health Products"}
-        column1={"Resource Name"}
-        column2={"Quantity Remaining"}
-        column3={"Cost per unit"}
-        column4={"Auto-Purchase"}
-        column5={"Auto-Purchase Level"}
-      />
-      {getData}
+      <div className="resources__container">
+        <SideNav />
+        <div className="resources__container--right">
+          <Table
+            title={"Health Products"}
+            column1={"Resource Name"}
+            column2={"Quantity Remaining"}
+            column3={"Cost per unit"}
+            column4={"Auto-Purchase"}
+            column5={"Auto-Purchase Level"}
+          />
+          {getData}
+        </div>
+      </div>
     </div>
   );
 };

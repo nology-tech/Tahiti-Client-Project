@@ -26,20 +26,20 @@ const Staff = () => {
 
   return (
     <div className="staff-page">
-      <h2>This is staff page</h2>
-      <div>
+      <div className="staff-page__page">
         <SideNav />
-        <Table
-          title={"Staff bookings"}
-          column1={"Client name"}
-          column2={"Email address"}
-          column3={"Mobile number"}
-          column4={"Booking date"}
-          column5={"Booking time"}
-        />
+        <div className="staff-page__page--rightside">
+          <Table
+            title={"Staff bookings"}
+            column1={"Client name"}
+            column2={"Email address"}
+            column3={"Mobile number"}
+            column4={"Booking date"}
+            column5={"Booking time"}
+          />
+          {getData}
+        </div>
       </div>
-
-      {getData}
     </div>
   );
 };

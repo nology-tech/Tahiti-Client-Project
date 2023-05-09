@@ -1,3 +1,11 @@
 .staff-page {
-    background-color: #ebebf5;
+  background-color: #ebebf5;
+
+  &__page {
+    display: flex;
+
+    &--rightside {
+      width: 100%;
+    }
   }
+}
