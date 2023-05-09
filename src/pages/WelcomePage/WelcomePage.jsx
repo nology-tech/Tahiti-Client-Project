@@ -5,7 +5,7 @@ import Logo from "../../assets/images/logo black.svg";
 import LoginForm from "../../components/Forms/LoginForm/LoginForm";
 import Button from "../../components/Button/Button";
 
-const WelcomePage = () => {
+const WelcomePage = ({ buttonStyle }) => {
   return (
     <div className="container">
       <div className="logo-container">
@@ -19,7 +19,7 @@ const WelcomePage = () => {
             treatments that will make you look like you are 18 again!
           </p>
           <LoginForm />
-          <Button className="button-yellow__welcome" name="Login" image={""} />
+          <Button className={buttonStyle} name="Login" image={false} variant="yellowWide" />
         </div>
       </div>
 

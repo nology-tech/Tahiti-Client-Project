@@ -1,6 +1,14 @@
-.button-yellow {
+@use "../../styles/variables.scss" as*;
+.button {
   height: 50px;
   border-radius: 7px;
   border: none;
   color: white;
+
+}
+
+.yellowWide {
+  margin-top:30px;
+  width:410px;
+  background-color: $color-buttonPrimary;
 }

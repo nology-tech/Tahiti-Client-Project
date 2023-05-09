@@ -9,8 +9,8 @@ const Booking = () => {
       <h1>Booking</h1>
       <SideNav />
       <div className="buttons">
-        <Button className="button-grey" name="Cancel" />
-        <Button className="button-yellow" name="Save" />
+        <Button isYellow={false} name="Cancel" />
+        <Button isYellow={true} name="Save" />
       </div>
     </div>
   );
