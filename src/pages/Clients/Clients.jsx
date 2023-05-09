@@ -4,6 +4,7 @@ import Table from "../../components/Table/Table";
 import mockData from "../../assets/data/mockData.js";
 import TableCard from "../../components/TableCard/TableCard";
 import SideNav from "../../components/SideNav/SideNav";
+import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
 
 const Clients = () => {
   const getClientsData = mockData.clientData.map((client, index) => {
@@ -23,6 +24,12 @@ const Clients = () => {
 
   return (
     <div className="clients-container">
+      <div className="clients-container__mobile">
+        {mockData.clientData.map((client, index) => {
+          return <MobileNavButton key={index} name={client.name} />;
+        })}
+      </div>
+
       <div className="clients-container__page">
         <SideNav />
         <div className="clients-container__page--rightside">

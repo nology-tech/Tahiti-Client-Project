@@ -6,11 +6,31 @@
   height: 100vh;
 
   &__page {
-    display: flex;
-    height: 100%;
+    display: none;
+  }
+}
 
-    &--rightside {
-      width: 100%;
+@media screen and (min-width: 720px) {
+  .clients-container {
+    &__page {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .clients-container {
+    &__mobile {
+      display: none;
+    }
+
+    &__page {
+      display: flex;
+      height: 100%;
+
+      &--rightside {
+        width: 100%;
+      }
     }
   }
 }
