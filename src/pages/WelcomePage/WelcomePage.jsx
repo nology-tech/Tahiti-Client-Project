@@ -19,7 +19,7 @@ const WelcomePage = () => {
             treatments that will make you look like you are 18 again!
           </p>
           <LoginForm />
-          <Button className="button-welcome" name="Log In" image={""} />
+          <Button className="button-yellow__welcome" name="Login" image={""} />
         </div>
       </div>
 
