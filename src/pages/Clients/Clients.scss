@@ -4,32 +4,31 @@
 .clients-container {
   background-color: #ebebf5;
   height: 100vh;
+  padding-top: 100px;
 
-  &__page {
+  &__mobile {
     display: none;
   }
-}
 
-@media screen and (min-width: 720px) {
-  .clients-container {
-    &__page {
-      display: none;
+  &__page {
+    display: flex;
+    height: 100%;
+
+    &--rightside {
+      width: 100%;
     }
   }
 }
 
-@media screen and (min-width: $desktop-breakpoint) {
+@media screen and (max-width: 720px) {
   .clients-container {
     &__mobile {
-      display: none;
+      display: unset;
     }
 
     &__page {
-      display: flex;
-      height: 100%;
-
       &--rightside {
-        width: 100%;
+        display: none;
       }
     }
   }

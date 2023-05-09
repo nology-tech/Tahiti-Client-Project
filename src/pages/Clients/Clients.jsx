@@ -29,7 +29,6 @@ const Clients = () => {
           return <MobileNavButton key={index} name={client.name} />;
         })}
       </div>
-
       <div className="clients-container__page">
         <SideNav />
         <div className="clients-container__page--rightside">
