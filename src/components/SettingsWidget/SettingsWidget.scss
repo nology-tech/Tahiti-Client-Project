@@ -1,4 +1,22 @@
 .widget {
     position:absolute;
-    
+    top:200px;
+    left:400px;
+    width:450px;
+    height:250px;
+    background-color: gray;
+    border-radius: 15px;
+
+    .colorMode {
+        display:flex;
+    }
+
+    .textMode {
+        display:flex;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
 }
