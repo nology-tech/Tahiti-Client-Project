@@ -3,14 +3,14 @@ import "./Booking.scss";
 import SideNav from "../../components/SideNav/SideNav";
 import Button from "../../components/Button/Button";
 
-const Booking = () => {
+const Booking = (buttonStyle) => {
   return (
     <div>
       <h1>Booking</h1>
       <SideNav />
       <div className="buttons">
-        <Button isYellow={false} name="Cancel" />
-        <Button isYellow={true} name="Save" />
+        <Button className={buttonStyle} variant="grayMid" name="Cancel" />
+        <Button className={buttonStyle} variant="yellowMid" name="Save" />
       </div>
     </div>
   );
