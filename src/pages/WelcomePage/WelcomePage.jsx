@@ -43,7 +43,6 @@ const WelcomePage = ({ setUser, buttonStyle }) => {
             Welcome to New You clinic where we provide world class beauty
             treatments that will make you look like you are 18 again!
           </p>
-
           <LoginForm
             password={password}
             email={email}
