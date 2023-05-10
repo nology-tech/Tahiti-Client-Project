@@ -1,6 +1,8 @@
+@use "../../styles/variables.scss" as *;
+
 .booking {
   display: flex;
-
+  background-color: #ebebf5;
   &__nav {
   }
   &__main {
@@ -8,5 +10,11 @@
       display: flex;
       flex-direction: column;
     }
+  }
+  
+  &__heading {
+    width: 100vw;
+    height: 100px;
+    background-color: $color-white-header;
   }
 }

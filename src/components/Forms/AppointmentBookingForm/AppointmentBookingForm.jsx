@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 import "./AppointmentBookingForm.scss";
 import mockData from "../../../assets/data/mockData.js";
 
 const AppointmentBookingForm = () => {
+  const [value, onChange] = useState(new Date());
+
   return (
     <div className="booking-form">
       <div className="booking-form__left">
@@ -26,7 +30,8 @@ const AppointmentBookingForm = () => {
         </div>
       </div>
       <div className="booking-form__right">
-        <h3>Calendar goes here</h3>
+        <Calendar onChange={onChange} value={value} />
+        {console.log(value)}
         <label className="booking-form__right--label">Time:</label>
         <select className="booking-form__left--select">
           <option>9:00</option>
