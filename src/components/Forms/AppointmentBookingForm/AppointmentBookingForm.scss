@@ -1,0 +1,63 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/main.scss" as *;
+
+.booking-form {
+  padding: 100px;
+  display: flex;
+  &__left {
+    display: flex;
+    flex-direction: column;
+
+    &--label {
+      font-size: 14px;
+      color: $text-black;
+      font-weight: 600;
+      padding: 12px 0;
+    }
+
+    &--input {
+      width: 349px;
+      height: 49px;
+      border: 1px solid #e2e8f0;
+      border-radius: 7px;
+      padding-left: 10px;
+      font-size: 14px;
+    }
+
+    &--select {
+      width: 349px;
+      height: 49px;
+      border: 1px solid #e2e8f0;
+      border-radius: 7px;
+      padding-left: 10px;
+    }
+
+    &--buttons {
+      padding-top: 55px;
+      button {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &__right {
+    margin-left: 112px;
+    display: flex;
+    flex-direction: column;
+
+    &--label {
+      font-size: 14px;
+      color: $text-black;
+      font-weight: 600;
+      padding: 12px 0;
+    }
+
+    &--select {
+      width: 349px;
+      height: 49px;
+      border: 1px solid #e2e8f0;
+      border-radius: 7px;
+      padding-left: 10px;
+    }
+  }
+}

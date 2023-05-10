@@ -1,0 +1,12 @@
+.booking {
+  display: flex;
+
+  &__nav {
+  }
+  &__main {
+    &--right {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
