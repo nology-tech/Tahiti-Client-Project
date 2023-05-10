@@ -1,15 +1,17 @@
 .topnav {
     min-height: 157px;
     max-width: 1131px;
-    margin-left: 309px;
+    margin-left: 300px;
     background-color: #FFFFFF;
-    // border: 1px solid black;
-    display: flex;
-    justify-content:space-between;
-    align-items:center;
-    padding: 0px 111px 0px 102px;
     border-radius: 7px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    &__header{
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        padding: 50px 111px 0px 102px;
+    }
 
     &__button {
         width: 130px;
@@ -19,12 +21,15 @@
         background-color: #E5C58A;
         color: #FFFFFF;
         font-size: 16px;
-
     }
 
     &__heading {
         font-size: 32px;
         font-family: Poppins;
         color: #2D3748;
+    }
+
+    &__dropdown{
+        margin-left: 90px;
     }
 }
