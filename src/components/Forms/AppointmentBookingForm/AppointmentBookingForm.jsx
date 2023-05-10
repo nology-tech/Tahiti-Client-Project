@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import DatePicker from "react-datepicker";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./AppointmentBookingForm.scss";
 import mockData from "../../../assets/data/mockData.js";
 import Button from "../../Button/Button";
+import "react-datepicker/dist/react-datepicker.css";
 
 const AppointmentBookingForm = () => {
-  const [date, onChange] = useState(new Date());
+  const [bookingDate, onChange] = useState(new Date());
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -15,11 +17,7 @@ const AppointmentBookingForm = () => {
   const [staffMember, setStaffMember] = useState("Tom Tompson");
   const [time, setTime] = useState("9:00");
 
-  // const handleChange = (event) => {
-  //   const name = event.target.name;
-  //   const value = event.target.value;
-  //   setInputs(values => ({...values, [name]: value}))
-  // }
+  const [date, setStartDate] = useState(new Date());
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,10 +27,26 @@ const AppointmentBookingForm = () => {
       email,
       mobileNumber,
       staffMember,
+      bookingDate,
       date,
       time,
     };
     console.log(appointmentData);
+    handleCancel();
+  };
+
+  const handleMobileSubmit = (event) => {
+    event.preventDefault();
+    const appointmentDataMobile = {
+      firstName,
+      lastName,
+      email,
+      mobileNumber,
+      staffMember,
+      date,
+      time,
+    };
+    console.log(appointmentDataMobile);
     handleCancel();
   };
 
@@ -111,39 +125,60 @@ const AppointmentBookingForm = () => {
           })}
         </select>
         <div className="booking-form__left--buttons">
-          <Button name={"cancel"} variant="grayMid" onClick={handleCancel} />
-          <Button name={"save"} variant="yellowMid" onClick={handleSubmit} />
+          <Button name={"Cancel"} variant="grayMid" onClick={handleCancel} />
+          <Button name={"Save"} variant="yellowMid" onClick={handleSubmit} />
         </div>
       </div>
       <div className="booking-form__right">
-        <Calendar onChange={onChange} value={date} />
+        <Calendar
+          className="booking-form__right--desktop-calendar"
+          onChange={onChange}
+          value={bookingDate}
+        />
 
-        {/* {console.log(value)}
-        {console.log(staffMember)} */}
-        <label className="booking-form__right--label">Time:</label>
-        <select
-          className="booking-form__right--select"
-          value={time}
-          onChange={handleTime}
-        >
-          <option>9:00</option>
-          <option>9:30</option>
-          <option>10:00</option>
-          <option>10:30</option>
-          <option>11:00</option>
-          <option>11:30</option>
-          <option>12:00</option>
-          <option>12:30</option>
-          <option>13:00</option>
-          <option>13:30</option>
-          <option>14:00</option>
-          <option>14:30</option>
-          <option>15:00</option>
-          <option>15:30</option>
-          <option>16:00</option>
-          <option>16:30</option>
-          <option>17:00</option>
-        </select>
+        {/* {console.log(staffMember)}  */}
+        <label className="booking-form__right--label">Date:</label>
+        <DatePicker
+          className="mobile-date"
+          selected={date}
+          onChange={(date) => setStartDate(date)}
+        />
+
+        <div>
+          <label className="booking-form__right--label">Time:</label>
+          <div>
+            <select
+              className="booking-form__right--select"
+              value={time}
+              onChange={handleTime}
+            >
+              <option>9:00</option>
+              <option>9:30</option>
+              <option>10:00</option>
+              <option>10:30</option>
+              <option>11:00</option>
+              <option>11:30</option>
+              <option>12:00</option>
+              <option>12:30</option>
+              <option>13:00</option>
+              <option>13:30</option>
+              <option>14:00</option>
+              <option>14:30</option>
+              <option>15:00</option>
+              <option>15:30</option>
+              <option>16:00</option>
+              <option>16:30</option>
+              <option>17:00</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div className="mobile-button">
+        <Button
+          name={"Submit"}
+          variant="yellowWide"
+          onClick={handleMobileSubmit}
+        />
       </div>
     </div>
   );

@@ -214,3 +214,53 @@
 .react-calendar--selectRange .react-calendar__tile--hover {
   background-color: #e6e6e6;
 }
+
+.mobile-date {
+  display: none;
+}
+
+.mobile-button {
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__left {
+      &--buttons {
+        display: none;
+      }
+    }
+    &__right {
+      padding: 12px 0;
+      margin: 0;
+      &--desktop-calendar {
+        display: none;
+      }
+
+      &--label {
+        padding: 10px;
+      }
+      &--select {
+        width: 349px;
+        height: 49px;
+        margin-top: 12px;
+        padding: 12px;
+      }
+    }
+  }
+  .mobile-date {
+    display: unset;
+    width: 349px;
+    height: 40px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+  }
+
+  .mobile-button {
+    display: unset;
+  }
+}
