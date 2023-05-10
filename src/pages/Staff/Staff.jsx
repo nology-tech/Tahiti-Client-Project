@@ -6,6 +6,7 @@ import TableCard from "../../components/TableCard/TableCard";
 import SideNav from "../../components/SideNav/SideNav";
 import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
 
+
 const Staff = () => {
   const getData = mockData.clientData.map((client) => {
     return client.bookings.map((booking, index) => {

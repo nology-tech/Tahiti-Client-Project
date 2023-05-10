@@ -6,9 +6,9 @@ const Booking = () => {
   return (
     <div>
       <h1>Booking</h1>
-      <SideNav/>
+      <SideNav />
     </div>
-  )
+  );
 };
 
 export default Booking;
