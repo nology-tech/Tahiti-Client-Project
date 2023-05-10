@@ -12,47 +12,38 @@
   border: 2px solid #95accb;
   border-radius: 15px;
   padding: 30px;
-
   h1 {
     color: #2d3748;
   }
-
   .colorMode {
     display: flex;
   }
-
   .textMode {
     margin-top: 15px;
     display: flex;
     gap: 0px;
-
     p {
       color: #95accb;
       font-size: 17px;
     }
   }
-
   h1 {
     font-size: 18px;
   }
-
   .theme {
     display: inline-flex;
     gap: 40px;
   }
-
   .theme-modern {
     display: flex;
     flex-direction: row;
     gap: 10px;
   }
-
   .theme-tech {
     display: flex;
     flex-direction: row;
     gap: 10px;
   }
-
   .switch {
     margin-top: 9px;
     margin-left: 17px;
@@ -62,13 +53,11 @@
     width: 65px;
     height: 24px;
   }
-
   .switch input {
     opacity: 0;
     width: 0;
     height: 0;
   }
-
   .slider {
     position: absolute;
     cursor: pointer;
@@ -81,7 +70,6 @@
     transition: 0.4s;
     border: 2px solid #95accb;
   }
-
   .slider:before {
     position: absolute;
     content: "";
@@ -93,33 +81,26 @@
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
-
   input:checked + .slider {
     background-color: #2d3748;
   }
-
   input:focus + .slider {
     box-shadow: 0 0 1px #2d3748;
   }
-
   input:checked + .slider:before {
     -webkit-transform: translateX(20px);
     -ms-transform: translateX(20px);
     transform: translateX(20px);
   }
-
   .slider.round {
     border-radius: 20px;
   }
-
   .slider.round:before {
     border-radius: 50%;
   }
-
   img {
     width: 25px;
   }
-
   .selector {
     cursor: pointer;
   }
@@ -159,14 +140,12 @@ input[type="radio"]:before {
     height: 340px;
     display: flex;
     flex-direction: column;
-
     .colorMode {
       display: block;
       h1 {
         padding-bottom: 15px;
       }
     }
-
     .textMode {
       flex-direction: column;
       gap: 0px;
@@ -176,7 +155,6 @@ input[type="radio"]:before {
         justify-content: space-around;
         margin-right: 39px;
         gap: 90px;
-
         &-modern {
           gap: 15px;
         }
@@ -185,7 +163,6 @@ input[type="radio"]:before {
         }
       }
     }
-
     .switch {
       bottom: 10px;
       width: 47px;

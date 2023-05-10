@@ -6,13 +6,18 @@ import { useState } from "react";
 
 const SettingsWidget = () => {
   const [darkTheme, setDarkTheme] = useState(false);
-  const [textTheme, setTextTheme] = useState(false);
+  const [textTheme, setTextTheme] = useState("Modern Mode");
 
   const changeColorTheme = () => {
     setDarkTheme(!darkTheme);
   };
-  const changeTextTheme = () => {
-    setTextTheme(true);
+  
+  const changeToModern = () => {
+    setTextTheme("Modern Mode");
+  };
+
+  const changeToTech = () => {
+    setTextTheme("Tech Mode");
   };
 
   const applyTheme = () => {
@@ -30,13 +35,12 @@ const SettingsWidget = () => {
         </label>
         <img src={Moon} alt="" />
       </div>
-
       <section className="textMode">
         <h1>Select Theme:</h1>
         <div className="theme">
           <div className="theme-modern">
             <p>Modern</p>
-            <input name="select" type="radio" onClick={changeTextTheme} />
+            <input name="select" type="radio" onClick={changeToModern} />
           </div>
           <div className="theme-tech">
             <p>Tech</p>
@@ -44,7 +48,7 @@ const SettingsWidget = () => {
               name="select"
               className="selector"
               type="radio"
-              onClick={changeTextTheme}
+              onClick={changeToTech}
             />
           </div>
         </div>
