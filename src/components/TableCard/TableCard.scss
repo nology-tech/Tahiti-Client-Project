@@ -1,0 +1,39 @@
+@use "../../styles/variables" as *;
+@use "../../styles/main.scss" as *;
+
+.data-row {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.5fr;
+  text-align: center;
+  font-size: 14px;
+  background-color: $color-white-header;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 20px;
+
+  &__item {
+    color: #95accb;
+
+    &--fourth {
+      color: #95accb;
+      font-weight: bold;
+    }
+    &--first {
+      font-weight: bold;
+    }
+  }
+}
+
+.right-arrow {
+  font-size: 24px;
+}
+
+#table-header {
+  margin-left: 50px;
+  color: #95accb;
+  font-size: 14px;
+  font-weight: bold;
+
+}

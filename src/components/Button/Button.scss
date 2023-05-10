@@ -1,0 +1,57 @@
+@use "../../styles/variables.scss" as *;
+.button {
+  height: 50px;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.yellowWide {
+  margin-top: 30px;
+  width: 392px;
+  background-color: $color-buttonPrimary;
+}
+
+.yellowMid {
+  background-color: $color-buttonPrimary;
+  margin-top: 70px;
+  width: 170px;
+  box-shadow: 0px 20px 40px rgba(114, 75, 203, 0.2);
+}
+
+.grayMid {
+  background-color: $color-buttonTertiary;
+  margin-top: 70px;
+}
+
+.yellowNarrow {
+  position: absolute;
+  width: 130px;
+  height: 50px;
+  left: 1199px;
+  top: 59px;
+  background-color: $color-buttonPrimary;
+  box-shadow: 0px 20px 40px rgba(114, 75, 203, 0.2);
+  border-radius: 7px;
+  padding-left: 20px;
+}
+
+.plusButton {
+  position: absolute;
+  left: 1215px;
+  top: 77.5px;
+  z-index: 999;
+}
+
+@media screen and (max-width: 324px) {
+  .yellowWide {
+    width: 243px;
+  }
+  .yellowMid {
+    display: none;
+  }
+  .grayMid {
+    display: none;
+  }
+}
