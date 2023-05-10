@@ -9,7 +9,7 @@ import { auth } from "../../firebase";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const WelcomePage = ({ setUser, buttonStyle }) => {
+const WelcomePage = ({ setUser }) => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState(false);
@@ -50,7 +50,6 @@ const WelcomePage = ({ setUser, buttonStyle }) => {
             passwordInput={setPassword}
           />
           <Button
-            className={buttonStyle}
             name="Login"
             image={false}
             variant="yellowWide"
