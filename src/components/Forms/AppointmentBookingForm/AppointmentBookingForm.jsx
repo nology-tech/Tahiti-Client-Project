@@ -8,19 +8,69 @@ import Button from "../../Button/Button";
 const AppointmentBookingForm = () => {
   const [value, onChange] = useState(new Date());
 
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [staffMember, setStaffMember] = useState("");
+
+  const handleFirstName = (event) => {
+    setFirstName(event.target.value);
+  };
+
+  const handleLastName = (event) => {
+    setLastName(event.target.value);
+  };
+
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleMobileNumber = (event) => {
+    setMobileNumber(event.target.value);
+  };
+
+  const handleStaffMember = (event) => {
+    setStaffMember(event.target.innerHTML);
+  };
+
   return (
     <div className="booking-form">
       <div className="booking-form__left">
         <label className="booking-form__left--label">First Name</label>
-        <input className="booking-form__left--input" type="text" />
+        <input
+          className="booking-form__left--input"
+          type="text"
+          value={firstName}
+          onChange={handleFirstName}
+        />
         <label className="booking-form__left--label">Last Name</label>
-        <input className="booking-form__left--input" type="text" />
+        <input
+          className="booking-form__left--input"
+          type="text"
+          value={lastName}
+          onChange={handleLastName}
+        />
         <label className="booking-form__left--label">Email Address</label>
-        <input className="booking-form__left--input" type="text" />
+        <input
+          className="booking-form__left--input"
+          type="text"
+          value={email}
+          onChange={handleEmail}
+        />
         <label className="booking-form__left--label">Mobile Number</label>
-        <input className="booking-form__left--input" type="text" />
+        <input
+          className="booking-form__left--input"
+          type="text"
+          value={mobileNumber}
+          onChange={handleMobileNumber}
+        />
         <label className="booking-form__left--label">Staff Member</label>
-        <select className="booking-form__left--select">
+        <select
+          className="booking-form__left--select"
+          value={staffMember}
+          onChange={handleStaffMember}
+        >
           {mockData.staffData.map((staff, index) => {
             return <option key={index}>{staff.fullName}</option>;
           })}
@@ -33,8 +83,9 @@ const AppointmentBookingForm = () => {
       <div className="booking-form__right">
         <Calendar onChange={onChange} value={value} />
         {console.log(value)}
+        {console.log(staffMember)}
         <label className="booking-form__right--label">Time:</label>
-        <select className="booking-form__left--select">
+        <select className="booking-form__right--select">
           <option>9:00</option>
           <option>9:30</option>
           <option>10:00</option>
