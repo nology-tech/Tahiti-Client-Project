@@ -1,0 +1,42 @@
+@use "../../styles/variables" as *;
+@use "../../styles/main.scss" as *;
+
+.clients-container {
+  background-color: #ebebf5;
+
+  &__mobile {
+    display: none;
+  }
+
+  &__page {
+    display: flex;
+
+    &--rightside {
+      width: 100%;
+    }
+  }
+
+  .client-wrap {
+    overflow-y: auto;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .clients-container {
+    padding-top: 100px;
+    height: 100vh;
+
+    &__mobile {
+      display: unset;
+      height: 100vh;
+    }
+
+    &__page {
+      &--rightside {
+        width: 100%;
+        display: none;
+      }
+    }
+  }
+}

@@ -83,7 +83,7 @@ const SideNav = () => {
       </section>
 
       <div className="home">
-        <Link to="/home">
+        <Link to="/home" className="homeButton">
           <img src={iconHouse} alt="" />
           <h1>HOME</h1>
         </Link>
