@@ -3,6 +3,7 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./AppointmentBookingForm.scss";
 import mockData from "../../../assets/data/mockData.js";
+import Button from "../../Button/Button";
 
 const AppointmentBookingForm = () => {
   const [value, onChange] = useState(new Date());
@@ -25,8 +26,8 @@ const AppointmentBookingForm = () => {
           })}
         </select>
         <div className="booking-form__left--buttons">
-          <button>Cancel</button>
-          <button>Save</button>
+          <Button name={"cancel"} variant="grayMid" />
+          <Button name={"save"} variant="yellowMid" />
         </div>
       </div>
       <div className="booking-form__right">
