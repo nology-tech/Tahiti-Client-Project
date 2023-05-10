@@ -9,14 +9,22 @@ const SettingsWidget = () => {
         <div className='colorMode'>
             <h1>Light/Dark Mode:</h1>
             <img src={Sun} alt="" />
+            <label className="switch">
+              <input type="checkbox"/>
+              <span className="slider round"></span>
+            </label>
             <img src={Moon} alt="" />
         </div>
         <div className='textMode'>
             <h1>Select Theme:</h1>
-            <p>Modern</p>
-            <input type="radio"/>
-            <p>Tech</p>
-            <input type="radio"/>
+            <div className='theme'>
+              <p>Modern</p>
+              <input name="select" className="selector" type="radio"/>
+            </div>
+            <div className='theme'>
+              <p>Tech</p>
+              <input name="select" className="selector" type="radio"/>
+            </div>
         </div>
         <button>Apply</button>
         
