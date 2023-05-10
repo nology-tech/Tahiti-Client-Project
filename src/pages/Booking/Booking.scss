@@ -11,10 +11,20 @@
       flex-direction: column;
     }
   }
-  
+
   &__heading {
     width: 100vw;
     height: 100px;
     background-color: $color-white-header;
+  }
+}
+
+@media screen and (max-width: 324px) {
+  .booking {
+    &__heading {
+      display: none;
+    }
+
+    
   }
 }

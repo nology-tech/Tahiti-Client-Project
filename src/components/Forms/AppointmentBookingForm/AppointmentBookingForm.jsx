@@ -12,8 +12,14 @@ const AppointmentBookingForm = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
-  const [staffMember, setStaffMember] = useState("");
-  const [time, setTime] = useState("");
+  const [staffMember, setStaffMember] = useState("Tom Tompson");
+  const [time, setTime] = useState("9:00");
+
+  // const handleChange = (event) => {
+  //   const name = event.target.name;
+  //   const value = event.target.value;
+  //   setInputs(values => ({...values, [name]: value}))
+  // }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -27,7 +33,18 @@ const AppointmentBookingForm = () => {
       time,
     };
     console.log(appointmentData);
+    handleCancel();
   };
+
+  const handleCancel = () => {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setMobileNumber("");
+    setStaffMember("");
+    setTime("9:00");
+  };
+
   const handleFirstName = (event) => {
     setFirstName(event.target.value);
   };
@@ -94,12 +111,13 @@ const AppointmentBookingForm = () => {
           })}
         </select>
         <div className="booking-form__left--buttons">
-          <Button name={"cancel"} variant="grayMid" />
+          <Button name={"cancel"} variant="grayMid" onClick={handleCancel} />
           <Button name={"save"} variant="yellowMid" onClick={handleSubmit} />
         </div>
       </div>
       <div className="booking-form__right">
         <Calendar onChange={onChange} value={date} />
+
         {/* {console.log(value)}
         {console.log(staffMember)} */}
         <label className="booking-form__right--label">Time:</label>

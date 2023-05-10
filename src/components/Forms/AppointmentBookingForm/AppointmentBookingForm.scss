@@ -42,7 +42,7 @@
   }
 
   &__right {
-    margin-top: 76px;
+    margin-top: 20px;
     margin-left: 112px;
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@
       font-size: 14px;
       color: $text-black;
       font-weight: 600;
-      padding: 12px 0;
+      padding: 12px 18px;
     }
 
     &--select {
@@ -59,13 +59,16 @@
       height: 49px;
       border: 1px solid #e2e8f0;
       border-radius: 7px;
+      margin-left: 10px;
       padding-left: 10px;
     }
   }
 }
 
 .react-calendar {
-  width: 350px;
+  font-size: 16px;
+  height: 335px;
+  width: 394px;
   max-width: 100%;
   background: none;
   border: none;
@@ -101,6 +104,7 @@
   margin: 0;
   border: 0;
   outline: none;
+  font-size: 20px;
 }
 
 .react-calendar button:enabled:hover {
@@ -115,6 +119,7 @@
 }
 
 .react-calendar__navigation button {
+  font-size: 24px;
   min-width: 44px;
   background: none;
 }
