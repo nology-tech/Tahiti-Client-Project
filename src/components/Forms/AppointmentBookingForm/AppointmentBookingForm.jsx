@@ -6,14 +6,28 @@ import mockData from "../../../assets/data/mockData.js";
 import Button from "../../Button/Button";
 
 const AppointmentBookingForm = () => {
-  const [value, onChange] = useState(new Date());
+  const [date, onChange] = useState(new Date());
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
   const [staffMember, setStaffMember] = useState("");
+  const [time, setTime] = useState("");
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const appointmentData = {
+      firstName,
+      lastName,
+      email,
+      mobileNumber,
+      staffMember,
+      date,
+      time,
+    };
+    console.log(appointmentData);
+  };
   const handleFirstName = (event) => {
     setFirstName(event.target.value);
   };
@@ -31,7 +45,11 @@ const AppointmentBookingForm = () => {
   };
 
   const handleStaffMember = (event) => {
-    setStaffMember(event.target.innerHTML);
+    setStaffMember(event.target.value);
+  };
+
+  const handleTime = (event) => {
+    setTime(event.target.value);
   };
 
   return (
@@ -77,15 +95,19 @@ const AppointmentBookingForm = () => {
         </select>
         <div className="booking-form__left--buttons">
           <Button name={"cancel"} variant="grayMid" />
-          <Button name={"save"} variant="yellowMid" />
+          <Button name={"save"} variant="yellowMid" onClick={handleSubmit} />
         </div>
       </div>
       <div className="booking-form__right">
-        <Calendar onChange={onChange} value={value} />
-        {console.log(value)}
-        {console.log(staffMember)}
+        <Calendar onChange={onChange} value={date} />
+        {/* {console.log(value)}
+        {console.log(staffMember)} */}
         <label className="booking-form__right--label">Time:</label>
-        <select className="booking-form__right--select">
+        <select
+          className="booking-form__right--select"
+          value={time}
+          onChange={handleTime}
+        >
           <option>9:00</option>
           <option>9:30</option>
           <option>10:00</option>
