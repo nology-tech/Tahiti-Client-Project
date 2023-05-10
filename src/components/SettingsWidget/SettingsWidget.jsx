@@ -1,7 +1,7 @@
 import React from 'react'
 import "./SettingsWidget.scss"
-import Sun from "../../assets/images/sun-toggle-icon.svg"
-import Moon from "../../assets/images/moon-toggle-icon.svg"
+import Sun from "../../assets/images/sun-toggle-dark.svg"
+import Moon from "../../assets/images/moon-toggle-dark.svg"
 
 const SettingsWidget = () => {
   return (
