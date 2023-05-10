@@ -3,49 +3,60 @@
 @use "../../styles/_typography" as *;
 
 .widget {
-    position:absolute;
-    top:180px;
-    left:400px;
-    width:450px;
-    height:250px;
-    background-color: white;
-    border:2px solid #95ACCB;
-    border-radius: 15px;
-    padding:30px;
+  position: absolute;
+  top: 180px;
+  left: 400px;
+  width: 450px;
+  height: 250px;
+  background-color: white;
+  border: 2px solid #95accb;
+  border-radius: 15px;
+  padding: 30px;
 
-    h1 {
-        color: #2D3748;
+  h1 {
+    color: #2d3748;
+  }
+
+  .colorMode {
+    display: flex;
+  }
+
+  .textMode {
+    margin-top: 15px;
+    display: flex;
+    gap: 0px;
+
+    p {
+      color: #95accb;
+      font-size: 17px;
     }
+  }
 
-    .colorMode {
-        display:flex;
-    }
+  h1 {
+    font-size: 18px;
+  }
 
-    .textMode {
-        margin-top:15px;
-        display:flex;
-        gap:35px;
-        
-        p {
-            color: #95ACCB;
-            font-size:17px;
-        }
-    }
+  .theme {
+    display: inline-flex;
+    gap: 40px;
+  }
 
-    h1 {
-        font-size: 18px;
-    }
+  .theme-modern {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
 
-    .theme {
-        display:flex;
-        gap:10px;
+  .theme-tech {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
 
-    }
-
-.switch {
-    margin-top:9px;
-    margin-left:17px;
-    margin-right:16px;
+  .switch {
+    margin-top: 9px;
+    margin-left: 17px;
+    margin-right: 16px;
     position: relative;
     display: inline-block;
     width: 65px;
@@ -57,7 +68,7 @@
     width: 0;
     height: 0;
   }
-  
+
   .slider {
     position: absolute;
     cursor: pointer;
@@ -65,32 +76,32 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color:  white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border:2px solid #95ACCB;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border: 2px solid #95accb;
   }
-  
+
   .slider:before {
     position: absolute;
     content: "";
     height: 16px;
     width: 16px;
     left: 3.5px;
-    bottom: 2.5px;
-    background-color: #95ACCB;
-    -webkit-transition: .4s;
-    transition: .4s;
+    bottom: 2px;
+    background-color: #95accb;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
-  
+
   input:checked + .slider {
-    background-color:  #2D3748;;
+    background-color: #2d3748;
   }
-  
+
   input:focus + .slider {
-    box-shadow: 0 0 1px #2D3748;;
+    box-shadow: 0 0 1px #2d3748;
   }
-  
+
   input:checked + .slider:before {
     -webkit-transform: translateX(20px);
     -ms-transform: translateX(20px);
@@ -100,20 +111,91 @@
   .slider.round {
     border-radius: 20px;
   }
-  
+
   .slider.round:before {
     border-radius: 50%;
   }
 
   img {
-    width:25px;
+    width: 25px;
   }
 
   .selector {
-    width:15px;
-    color: #95ACCB;
-    border: 2px solid #95ACCB;
+    cursor: pointer;
   }
+}
 
- 
+input[type="radio"]:checked:after {
+  width: 7px;
+  height: 8px;
+  border-radius: 15px;
+  top: -5px;
+  left: 3px;
+  position: relative;
+  background-color: #95accb;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+}
+input[type="radio"]:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 13px;
+  left: 0px;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+  border: 2px solid #95accb;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 380px) {
+  .widget {
+    margin-left: 10px;
+    position: absolute;
+    left: 8px;
+    width: 337px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+
+    .colorMode {
+      display: block;
+      h1 {
+        padding-bottom: 15px;
+      }
+    }
+
+    .textMode {
+      flex-direction: column;
+      gap: 0px;
+      padding-top: 15px;
+      .theme {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-right: 39px;
+        gap: 90px;
+
+        &-modern {
+          gap: 15px;
+        }
+        &-tech {
+          gap: 15px;
+        }
+      }
+    }
+
+    .switch {
+      bottom: 10px;
+      width: 47px;
+    }
+  }
+  input[type="radio"]:before {
+    top: 11.5px;
+  }
+  input[type="radio"]:checked:after {
+    top: -7px;
+    left: 3px;
+  }
 }
