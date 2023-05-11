@@ -7,22 +7,23 @@ import Button from "../Button/Button";
 
 const SettingsWidget = () => {
   const [darkTheme, setDarkTheme] = useState(false);
-  const [textTheme, setTextTheme] = useState("Modern Mode");
+  const [modernTheme, setModernTheme] = useState(true);
+  const [techTheme, setTechTheme] = useState(false);
 
   const changeColorTheme = () => {
     setDarkTheme(!darkTheme);
   };
-
   const changeToModern = () => {
-    setTextTheme("Modern Mode");
+    if (!modernTheme) {
+      setModernTheme(true);
+      setTechTheme(false);
+    }
   };
-
   const changeToTech = () => {
-    setTextTheme("Tech Mode");
-  };
-
-  const applyTheme = () => {
-    console.log(textTheme);
+    if (!techTheme) {
+      setTechTheme(true);
+      setModernTheme(false);
+    }
   };
 
   return (
@@ -41,7 +42,13 @@ const SettingsWidget = () => {
         <div className="theme">
           <div className="theme-modern">
             <p>Modern</p>
-            <input name="select" type="radio" onClick={changeToModern} />
+            <input
+              name="select"
+              type="radio"
+              onClick={changeToModern}
+              checked="unchecked"
+              value="1"
+            />
           </div>
           <div className="theme-tech">
             <p>Tech</p>
@@ -50,12 +57,14 @@ const SettingsWidget = () => {
               className="selector"
               type="radio"
               onClick={changeToTech}
+              checked="checked"
+              value="2"
             />
           </div>
         </div>
       </section>
       <div className="applyTheme">
-        <Button variant="yellowMid" onClick={applyTheme} name="Apply" />
+        <Button variant="yellowMid" name="Apply" />
       </div>
     </div>
   );
