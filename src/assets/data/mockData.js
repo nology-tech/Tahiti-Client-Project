@@ -1,4 +1,63 @@
 const mockData = {
+  bookingsData: [
+    {
+      bookingId: 1,
+      client: "Felix Tompson",
+      practitioner: "John Smith",
+      bookingDate: "12/12/2023",
+      bookingTime: "12:30",
+    },
+    {
+      bookingId: 2,
+      client: "Sarah Johnson",
+      practitioner: "John Smith",
+      bookingDate: "01/01/2023",
+      bookingTime: "10:00",
+    },
+    {
+      bookingId: 3,
+      client: "David Lee",
+      practitioner: "Tom Tompson",
+      bookingDate: "06/06/2023",
+      bookingTime: "14:00",
+    },
+    {
+      bookingId: 4,
+      client: "Emma Wilson",
+      practitioner: "Jane Dory",
+      bookingDate: "08/08/2023",
+      bookingTime: "16:00",
+    },
+    {
+      bookingId: 5,
+      client: "Emma Wilson",
+      practitioner: "Amy Johnson",
+      bookingDate: "02/02/2023",
+      bookingTime: "09:30",
+    },
+    {
+      bookingId: 6,
+      client: "Oliver Green",
+      practitioner: "Mike Williams",
+      bookingDate: "07/07/2023",
+      bookingTime: "11:00",
+    },
+    {
+      bookingId: 7,
+      client: "Sophie Brown",
+      practitioner: "Mike Williams",
+      bookingDate: "07/07/2023",
+      bookingTime: "11:30",
+    },
+    {
+      bookingId: 8,
+      client: "James Taylor",
+      practitioner: "Amy Johnson",
+      bookingDate: "04/04/2023",
+      bookingTime: "13:00",
+    },
+  ],
+
   clientData: [
     {
       name: "Felix Tompson",
@@ -8,13 +67,14 @@ const mockData = {
       dateOfBirth: "12/12/1997",
       email: "felixtompson@gmail.com",
       mobileNumber: "+44 745455097",
-      practitioner: "Jane Dow",
 
-      bookings: {
-        practitioner: "John Smith",
-        bookingDate: "12/12/2023",
-        bookingTime: "12:30",
-      },
+      bookings: [
+        {
+          practitioner: "John Smith",
+          bookingDate: "12/12/2023",
+          bookingTime: "12:30",
+        },
+      ],
     },
     {
       name: "Sarah Johnson",
@@ -25,11 +85,13 @@ const mockData = {
       email: "sarahjohnson@gmail.com",
       mobileNumber: "+44 712345678",
 
-      bookings: {
-        practitioner: "John Smith",
-        bookingDate: "01/01/2023",
-        bookingTime: "10:00",
-      },
+      bookings: [
+        {
+          practitioner: "John Smith",
+          bookingDate: "01/01/2023",
+          bookingTime: "10:00",
+        },
+      ],
     },
     {
       name: "David Lee",
@@ -40,11 +102,13 @@ const mockData = {
       email: "davidlee@gmail.com",
       mobileNumber: "+44 789012345",
 
-      bookings: {
-        practitioner: "Tom Tompson",
-        bookingDate: "06/06/2023",
-        bookingTime: "14:00",
-      },
+      bookings: [
+        {
+          practitioner: "Tom Tompson",
+          bookingDate: "06/06/2023",
+          bookingTime: "14:00",
+        },
+      ],
     },
     {
       name: "Emma Wilson",
@@ -55,11 +119,13 @@ const mockData = {
       email: "emmawilson@gmail.com",
       mobileNumber: "+44 745678901",
 
-      bookings: {
-        practitioner: "Jane Dory",
-        bookingDate: "08/08/2023",
-        bookingTime: "16:00",
-      },
+      bookings: [
+        {
+          practitioner: "Jane Dory",
+          bookingDate: "08/08/2023",
+          bookingTime: "16:00",
+        },
+      ],
     },
     {
       name: "Tom Jackson",
@@ -70,11 +136,13 @@ const mockData = {
       email: "tomjackson@gmail.com",
       mobileNumber: "+44 712345678",
 
-      bookings: {
-        practitioner: "Amy Johnson",
-        bookingDate: "02/02/2023",
-        bookingTime: "09:30",
-      },
+      bookings: [
+        {
+          practitioner: "Amy Johnson",
+          bookingDate: "02/02/2023",
+          bookingTime: "09:30",
+        },
+      ],
     },
     {
       name: "Oliver Green",
@@ -85,11 +153,13 @@ const mockData = {
       email: "olivergreen@gmail.com",
       mobileNumber: "+44 789012345",
 
-      bookings: {
-        practitioner: "Mike Williams",
-        bookingDate: "07/07/2023",
-        bookingTime: "11:00",
-      },
+      bookings: [
+        {
+          practitioner: "Mike Williams",
+          bookingDate: "07/07/2023",
+          bookingTime: "11:00",
+        },
+      ],
     },
     {
       name: "Sophie Brown",
@@ -100,11 +170,13 @@ const mockData = {
       email: "sophiebrown@gmail.com",
       mobileNumber: "+44 745678901",
 
-      bookings: {
-        practitioner: "Mike Williams",
-        bookingDate: "07/07/2023",
-        bookingTime: "11:30",
-      },
+      bookings: [
+        {
+          practitioner: "Mike Williams",
+          bookingDate: "07/07/2023",
+          bookingTime: "11:30",
+        },
+      ],
     },
     {
       name: "James Taylor",
@@ -115,11 +187,13 @@ const mockData = {
       email: "jamestaylor@gmail.com",
       mobileNumber: "+44 712345678",
 
-      bookings: {
-        practitioner: "Amy Johnson",
-        bookingDate: "04/04/2023",
-        bookingTime: "13:00",
-      },
+      bookings: [
+        {
+          practitioner: "Amy Johnson",
+          bookingDate: "04/04/2023",
+          bookingTime: "13:00",
+        },
+      ],
     },
   ],
 
@@ -136,15 +210,17 @@ const mockData = {
       manager: "John Walter",
       jobTitle: "Full Time Employee",
 
-      resources: {
-        resourceName: "notepad",
-        resourceId: 1,
-        quantity: 20,
-        autoPurchase: "YES",
-        constPerUnit: "£1.99",
-        autoPurchaseLevel: 10,
-        category: "admin",
-      },
+      resources: [
+        {
+          resourceName: "notepad",
+          resourceId: 1,
+          quantity: 20,
+          autoPurchase: "YES",
+          constPerUnit: "£1.99",
+          autoPurchaseLevel: 10,
+          category: "admin",
+        },
+      ],
     },
     {
       fullName: "John Smith",

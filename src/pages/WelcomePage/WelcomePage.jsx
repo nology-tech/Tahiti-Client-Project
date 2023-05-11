@@ -3,6 +3,7 @@ import "./WelcomePage.scss";
 import WelcomeImage from "../../assets/images/Background-img-welcome.svg";
 import Logo from "../../assets/images/logo black.svg";
 import LoginForm from "../../components/Forms/LoginForm/LoginForm";
+import Button from "../../components/Button/Button";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useState } from "react";
@@ -48,7 +49,12 @@ const WelcomePage = ({ setUser }) => {
             emailInput={setEmail}
             passwordInput={setPassword}
           />
-          <button onClick={getUser}>Log in</button>
+          <Button
+            name="Login"
+            image={false}
+            variant="yellowWide"
+            onClick={getUser}
+          />
         </div>
       </div>
       <img
@@ -69,4 +75,5 @@ const WelcomePage = ({ setUser }) => {
     </div>
   );
 };
+
 export default WelcomePage;
