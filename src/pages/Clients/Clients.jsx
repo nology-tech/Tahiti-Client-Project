@@ -53,6 +53,7 @@ const Clients = () => {
             column5={"practitioner"}
             searchTerm={searchTerm} 
             handleInput={handleInput}
+            searchedClient={searchedClient}
           />
           <div className="client-wrap">{getClientsData}</div>
           
