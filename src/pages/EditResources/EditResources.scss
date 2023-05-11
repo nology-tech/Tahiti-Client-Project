@@ -1,9 +1,14 @@
 .edit-resources {
   height: 100vh;
-  display: flex;
 
   &__container {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .edit-resources {
+    display: flex;
   }
 }

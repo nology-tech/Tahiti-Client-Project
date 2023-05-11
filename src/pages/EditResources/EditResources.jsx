@@ -9,8 +9,7 @@ const EditResources = () => {
       <SideNav />
       <div className="edit-resources__container">
         <h1>EditResources</h1>
-
-        <ResourceForm />
+        <ResourceForm className="edit-resources__container--form" />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 @use "../../../styles/variables" as *;
-@use "../../../styles/main.scss" as *;
+// @use "../../../styles/main.scss" as *;
 
 .resource-form-container {
   display: flex;
@@ -15,6 +15,7 @@
   border: 1px solid #e2e8f0;
   box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
   width: auto;
+  margin-top: 60px;
 
   &__label {
     font-size: 18px;
@@ -45,12 +46,12 @@
     }
 
     &--button {
-      -webkit-appearance: none;
-      width: 13px;
-      height: 13px;
-      border-radius: 50%;
-      outline: none;
-      border: 1px solid #95accb;
+      //   -webkit-appearance: none;
+      //   width: 13px;
+      //   height: 13px;
+      //   border-radius: 50%;
+      //   outline: none;
+      //   border: 1px solid #95accb;
       margin-right: 12px;
     }
   }
@@ -78,6 +79,7 @@
     box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
     width: auto;
     margin-left: 100px;
+    margin-top: 60px;
 
     &__left {
       display: flex;
@@ -142,12 +144,12 @@
         }
 
         .radio-buttons-input {
-          -webkit-appearance: none;
-          width: 13px;
-          height: 13px;
-          border-radius: 50%;
-          outline: none;
-          border: 1px solid #95accb;
+          //   -webkit-appearance: none;
+          //   width: 13px;
+          //   height: 13px;
+          //   border-radius: 50%;
+          //   outline: none;
+          //   border: 1px solid #95accb;
           margin-right: 72px;
         }
       }
