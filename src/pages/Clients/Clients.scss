@@ -9,7 +9,9 @@
   }
 
   &__page {
-    display: flex;
+    display: grid;
+    grid-template-columns: 309px 1fr;
+    grid-template-rows: 145px 1fr;
 
     &--rightside {
       width: 100%;

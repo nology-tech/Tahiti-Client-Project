@@ -31,8 +31,9 @@ const Clients = () => {
         })}
       </div>
       <div className="clients-container__page">
-        <TopNav heading="Clients" buttonTitle="+ Create" showButton={true} />
         <SideNav />
+        <TopNav heading="Clients" buttonTitle="+ Create" showButton={true} />
+
         <div className="clients-container__page--rightside">
           <Table
             title={"Clients List"}

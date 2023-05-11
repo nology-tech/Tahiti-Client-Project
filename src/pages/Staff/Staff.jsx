@@ -34,9 +34,13 @@ const Staff = () => {
         })}
       </div>
       <div className="staff-page__page">
-        <TopNav heading="Staff" buttonTitle="+ Edit" showButton={true} />
-
         <SideNav />
+        <TopNav
+          heading="Staff"
+          buttonTitle="+ Edit"
+          showButton={true}
+          showDropdown={true}
+        />
         <div className="staff-page__page--rightside">
           <Table
             title={"Staff bookings"}
