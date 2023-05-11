@@ -16,11 +16,17 @@ const ResourceForm = () => {
           <input
             className="resource-form__radio-buttons--button"
             type="radio"
+            id="auto1"
+            name="auto-purchase"
+            value="yes"
           />
           <label className="resource-form__radio-buttons--label">No</label>
           <input
             className="resource-form__radio-buttons--button"
             type="radio"
+            id="auto2"
+            name="auto-purchase"
+            value="no"
           />
         </div>
         <label className="resource-form__label">Auto-Purchase Level</label>
@@ -54,9 +60,21 @@ const ResourceForm = () => {
           </label>
           <div className="resource-form-desktop__right--radio-buttons">
             <label className="radio-buttons-label">Yes</label>
-            <input className="radio-buttons-input" type="radio" />
+            <input
+              className="radio-buttons-input"
+              type="radio"
+              id="auto1"
+              name="auto-purchase"
+              value="yes"
+            />
             <label className="radio-buttons-label">No</label>
-            <input className="radio-buttons-input" type="radio" />
+            <input
+              className="radio-buttons-input"
+              type="radio"
+              id="auto2"
+              name="auto-purchase"
+              value="yes"
+            />
           </div>
           <label className="resource-form-desktop__right--label">
             Auto-Purchase Level
