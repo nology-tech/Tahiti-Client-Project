@@ -8,13 +8,11 @@ import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
 import { useState } from "react";
 
 const Resources = () => {
-
   const [searchTerm, setSearchTerm]=useState("")
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value)
   }
-
   const searchedObject = mockData.staffData.filter((resource)=> {
     return resource.fullName.toLowerCase().includes(searchTerm.toLowerCase())
   })

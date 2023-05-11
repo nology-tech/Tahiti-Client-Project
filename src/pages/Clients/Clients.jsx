@@ -8,17 +8,15 @@ import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
 import { useState } from "react";
 
 const Clients = () => {
-
   const [searchTerm, setSearchTerm]=useState("")
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value)
   }
-
   const searchedClient = mockData.clientData.filter((client)=> {
     return client.name.toLowerCase().includes(searchTerm.toLowerCase())
   })
-
+  
   const getClientsData = searchedClient.map((client, index) => {
     return client.bookings.map((booking) => {
       return (
@@ -56,7 +54,6 @@ const Clients = () => {
             searchedClient={searchedClient}
           />
           <div className="client-wrap">{getClientsData}</div>
-          
         </div>
       </div>
     </div>

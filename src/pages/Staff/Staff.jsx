@@ -8,13 +8,11 @@ import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
 import { useState } from "react";
 
 const Staff = ( ) => {
-
   const [searchTerm, setSearchTerm]=useState("")
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value)
   }
-
   const searchedClient = mockData.clientData.filter((client)=> {
     return client.name.toLowerCase().includes(searchTerm.toLowerCase())
   })
@@ -35,7 +33,6 @@ const Staff = ( ) => {
       );
     });
   });
-  // A sorting functionality needed for filtering a clients for each member of staffs
 
   return (
     <div className="staff-page">
@@ -57,7 +54,6 @@ const Staff = ( ) => {
             handleInput={handleInput}
           />
           <div className="staff-wrap">{getData}</div>
-          
         </div>
       </div>
     </div>
