@@ -6,16 +6,16 @@ import mockData from "../../assets/data/mockData";
 const ClientCard = () => {
   const { clientId } = useParams();
 
-  const currentClient = mockData.find((client) => (client.id = clientId));
+  const currentClient = mockData.clientData.find((client) => (client.id = clientId));
 
-  const { name, clientImage, email, dateOfBirth, mobileNumber } = currentClient;
+  const { name, ClientImage, email, dateOfBirth, mobileNumber } = currentClient;
 
   return (
-    <>
+    <div className="cards">
       <div className="client-card">
         <img
           className="client-card__img"
-          src={clientImage}
+          src={ClientImage}
           alt="client-image"
         />
         <h1 className="client-card__name">{name}</h1>
@@ -34,7 +34,7 @@ const ClientCard = () => {
           <p>{mobileNumber}</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default ClientCard;
