@@ -5,9 +5,19 @@ import mockData from "../../assets/data/mockData.js";
 import TableCard from "../../components/TableCard/TableCard";
 import SideNav from "../../components/SideNav/SideNav";
 import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
+import { useState } from "react";
 
 const Clients = () => {
-  const getClientsData = mockData.clientData.map((client, index) => {
+  const [searchTerm, setSearchTerm]=useState("")
+
+  const handleInput = (event) => {
+    setSearchTerm(event.target.value)
+  }
+  const searchedClient = mockData.clientData.filter((client)=> {
+    return client.name.toLowerCase().includes(searchTerm.toLowerCase())
+  })
+  
+  const getClientsData = searchedClient.map((client, index) => {
     return client.bookings.map((booking) => {
       return (
         <TableCard
@@ -39,9 +49,11 @@ const Clients = () => {
             column3={"email address"}
             column4={"mobile number"}
             column5={"practitioner"}
+            searchTerm={searchTerm} 
+            handleInput={handleInput}
+            searchedClient={searchedClient}
           />
           <div className="client-wrap">{getClientsData}</div>
-          
         </div>
       </div>
     </div>
