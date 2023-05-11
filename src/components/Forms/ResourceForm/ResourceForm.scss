@@ -1,1 +1,57 @@
 @use "../../../styles/variables" as *;
+@use "../../../styles/main.scss" as *;
+
+.resource-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .resource-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 60px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
+    width: auto;
+
+    &__label {
+      font-size: 18px;
+      font-weight: 500;
+      text-align: left;
+      font-family: "Poppins";
+    }
+
+    &__input {
+      height: 49px;
+      width: 280px;
+      margin-bottom: 6px;
+      border: 1px solid #e2e8f0;
+      border-radius: 7px;
+    }
+
+    &__radio-buttons {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 28px;
+      &--label {
+        font-size: 14px;
+        color: #95accb;
+        padding-right: 8px;
+        font-family: "Poppins";
+      }
+
+      &--button {
+        -webkit-appearance: none;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        outline: none;
+        border: 1px solid #95accb;
+        margin-right: 12px;
+      }
+    }
+  }
+}
