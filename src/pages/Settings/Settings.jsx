@@ -6,9 +6,9 @@ import SettingsWidget from "../../components/SettingsWidget/SettingsWidget";
 
 const Settings = () => {
   return (
-    <div>
-      <TopNav heading="Settings" buttonTitle="+ Apply" showButton={true} />
+    <div className="settings-layout">
       <SideNav />
+      <TopNav heading="Settings" buttonTitle="+ Apply" showButton={true} />
       <SettingsWidget />
     </div>
   );

@@ -5,13 +5,13 @@ import TopNav from "../../components/TopNav/TopNav";
 
 const Booking = () => {
   return (
-    <div>
+    <div className="booking-layout">
+      <SideNav />
       <TopNav
         heading="Book Appointment"
         buttonTitle="+ Edit"
         showButton={false}
       />
-      <SideNav />
     </div>
   );
 };

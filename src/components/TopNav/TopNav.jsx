@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./TopNav.scss";
 
-const TopNav = ({ heading, buttonTitle, showButton }) => {
+const TopNav = ({ heading, buttonTitle, showButton, showDropdown }) => {
   const [staffChosen, setStaffChosen] = useState("");
 
   const staffNames = ["Leonardo", "Raphael", "Michaelangelo", "Donatelo"];
@@ -19,18 +19,20 @@ const TopNav = ({ heading, buttonTitle, showButton }) => {
           <button className="topnav__button">{buttonTitle}</button>
         )}
       </div>
-      <select
-        value={staffChosen}
-        onChange={handleStaff}
-        className="topnav__dropdown"
-      >
-        <option value="">Choose Staff</option>
-        {staffNames.map((staff, index) => (
-          <option key={index} value={staff}>
-            {staff}
-          </option>
-        ))}
-      </select>
+      {showDropdown && (
+        <select
+          value={staffChosen}
+          onChange={handleStaff}
+          className="topnav__dropdown"
+        >
+          <option value="">Choose Staff</option>
+          {staffNames.map((staff, index) => (
+            <option key={index} value={staff}>
+              {staff}
+            </option>
+          ))}
+        </select>
+      )}
     </div>
   );
 };
