@@ -47,7 +47,7 @@
     margin-top: 20px;
     margin-left: 56px;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     flex-direction: column;
 
     &--dateLabel {
@@ -277,7 +277,7 @@
       margin-top: 20px;
       margin-left: 20px;
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
       flex-direction: column;
 
       &--dateLabel {
@@ -512,17 +512,17 @@
         padding-right: 20px;
         margin-right: 40px;
       }
-      
-  .mobile-date {
-    border-radius: 7px;
-    display: unset;
-    width: 250px;
-    height: 40px;
-    padding: 10px;
-    margin-top: 10px;
-    margin-right: 40px;
-    border: none;
-  }
+
+      .mobile-date {
+        border-radius: 7px;
+        display: unset;
+        width: 250px;
+        height: 40px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-right: 40px;
+        border: none;
+      }
     }
   }
 
