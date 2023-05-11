@@ -49,10 +49,10 @@ const Resources = () => {
                   <MobileNavButton key={index} name={resource.resourceName} />
                 );
               })}
-              <MobileHomeButton />
             </>
           );
         })}
+        <MobileHomeButton />
       </div>
       <div className="desktop__container">
         <SideNav />

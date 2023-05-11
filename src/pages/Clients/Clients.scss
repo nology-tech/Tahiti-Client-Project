@@ -15,6 +15,7 @@
 
     &--rightside {
       width: 100%;
+      margin-top: 30px;
     }
   }
 
@@ -26,8 +27,6 @@
 
 @media screen and (max-width: 720px) {
   .clients-container {
-    height: 100vh;
-
     &__mobile {
       display: unset;
       height: 100vh;
