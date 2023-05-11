@@ -163,22 +163,22 @@ const AppointmentBookingForm = () => {
         />
         <label className="booking-form__right--label">Time:</label>
 
-        <div>
-          <select
-            className="booking-form__right--select"
-            value={time}
-            onChange={handleTime}
-          >
-            {timeSlots.map((element) => {
-              return (
-                <>
-                  <option>{element}</option>;
-                </>
-              );
-            })}
-            ;
-          </select>
-        </div>
+        {/* <div> */}
+        <select
+          className="booking-form__right--select"
+          value={time}
+          onChange={handleTime}
+        >
+          {timeSlots.map((element) => {
+            return (
+              <>
+                <option>{element}</option>;
+              </>
+            );
+          })}
+          ;
+        </select>
+        {/* </div> */}
       </div>
       <div className="mobile-button">
         <Button
