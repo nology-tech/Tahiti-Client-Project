@@ -7,7 +7,12 @@ import SideNav from "../../components/SideNav/SideNav";
 import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
 
 
+
 const Staff = () => {
+
+  
+
+
   const getData = mockData.clientData.map((client) => {
     return client.bookings.map((booking, index) => {
       return (
@@ -43,6 +48,7 @@ const Staff = () => {
             column3={"Mobile number"}
             column4={"Booking date"}
             column5={"Booking time"}
+
           />
           <div className="staff-wrap">{getData}</div>
           
