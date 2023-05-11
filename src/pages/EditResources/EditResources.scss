@@ -1,3 +1,9 @@
 .edit-resources {
   height: 100vh;
+  display: flex;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
 }
