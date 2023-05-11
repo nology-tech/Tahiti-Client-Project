@@ -3,6 +3,7 @@
 .booking {
   display: flex;
   background-color: #ebebf5;
+  height: 100vh;
   &__nav {
   }
   &__main {
@@ -24,7 +25,5 @@
     &__heading {
       display: none;
     }
-
-    
   }
 }
