@@ -3,6 +3,7 @@ import "./SettingsWidget.scss";
 import Sun from "../../assets/images/sun-toggle-dark.svg";
 import Moon from "../../assets/images/moon-toggle-dark.svg";
 import { useState } from "react";
+import Button from "../Button/Button";
 
 const SettingsWidget = () => {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -11,7 +12,7 @@ const SettingsWidget = () => {
   const changeColorTheme = () => {
     setDarkTheme(!darkTheme);
   };
-  
+
   const changeToModern = () => {
     setTextTheme("Modern Mode");
   };
@@ -53,7 +54,9 @@ const SettingsWidget = () => {
           </div>
         </div>
       </section>
-      <button onClick={applyTheme}>Apply</button>
+      <div className="applyTheme">
+        <Button variant="yellowMid" onClick={applyTheme} name="Apply" />
+      </div>
     </div>
   );
 };
