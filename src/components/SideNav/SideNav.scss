@@ -8,12 +8,7 @@
 
 .SideNav {
   background-color: $color-primary;
-  position: relative;
   height: 100vh;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
   box-shadow: 0px 20px 40px #f0f0ee;
   border-radius: 0px 30px 0px 0px;
   max-width: 309px;
@@ -21,6 +16,8 @@
   display: flex;
   flex-direction: column;
   padding-top: 120px;
+  grid-row-start: 1;
+  grid-row-end: 3;
 
   .SideNav--line {
     margin-left: 25px;
@@ -29,14 +26,17 @@
     margin-bottom: 15px;
   }
 
-  .white-logo {
-    height: 80px;
-    max-width: 130px;
-    position: absolute;
-    left: 29%;
-    right: 43.5%;
-    top: 4.75%;
-    bottom: 88.22%;
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    .white-logo {
+      height: 80px;
+      max-width: 130px;
+      left: 29%;
+      right: 43.5%;
+      top: 4.75%;
+      bottom: 88.22%;
+    }
   }
 
   .active {

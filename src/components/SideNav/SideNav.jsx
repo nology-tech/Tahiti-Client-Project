@@ -13,9 +13,11 @@ import { NavLink, Link } from "react-router-dom";
 
 const SideNav = () => {
   return (
-    <div>
+    <>
       <section className="SideNav">
-        <img className="white-logo" src={whiteLogo} alt="logo-left" />
+        <div className="logo-container">
+          <img className="white-logo" src={whiteLogo} alt="logo-left" />
+        </div>
         <img className="SideNav--line" src={navLine} id="line1" />
         <div className="menu"></div>
 
@@ -88,7 +90,7 @@ const SideNav = () => {
           <h1>HOME</h1>
         </Link>
       </div>
-    </div>
+    </>
   );
 };
 

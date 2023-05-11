@@ -51,10 +51,9 @@ const Resources = () => {
           );
         })}
       </div>
-      <TopNav heading="Resources" buttonTitle="+ Create" showButton={true} />
-
       <div className="desktop__container">
         <SideNav />
+        <TopNav heading="Resources" buttonTitle="+ Create" showButton={true} />
         <div className="desktop__container--right">
           <Table
             title={"Health Products"}
