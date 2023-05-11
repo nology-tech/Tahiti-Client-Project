@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./TopNav.scss";
 import WhiteLogo from "../../assets/images/logo-white.svg";
+import MockData from "../../assets/data/mockData";
 
 const TopNav = ({ heading, buttonTitle, showButton, showDropdown }) => {
   const [staffChosen, setStaffChosen] = useState("");
 
-  const staffNames = ["Leonardo", "Raphael", "Michaelangelo", "Donatelo"];
+  const staffNames = MockData.staffData.map((staff) => staff.fullName);
 
   const handleStaff = (event) => {
     setStaffChosen(event.target.value);
