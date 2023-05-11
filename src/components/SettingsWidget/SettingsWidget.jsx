@@ -46,8 +46,7 @@ const SettingsWidget = () => {
               name="select"
               type="radio"
               onClick={changeToModern}
-              checked="unchecked"
-              value="1"
+              defaultChecked
             />
           </div>
           <div className="theme-tech">
@@ -57,8 +56,6 @@ const SettingsWidget = () => {
               className="selector"
               type="radio"
               onClick={changeToTech}
-              checked="checked"
-              value="2"
             />
           </div>
         </div>
