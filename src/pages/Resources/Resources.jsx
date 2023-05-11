@@ -6,6 +6,7 @@ import TableCard from "../../components/TableCard/TableCard";
 import SideNav from "../../components/SideNav/SideNav";
 import TopNav from "../../components/TopNav/TopNav";
 import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
+import MobileHomeButton from "../../components/MobileHomeButton/MobileHomeButton";
 
 const Resources = () => {
   const getData = mockData.staffData.map((staff, index) => {
@@ -33,6 +34,7 @@ const Resources = () => {
   return (
     <div className="resources">
       <div className="resources__container">
+        <TopNav heading="Resources" buttonTitle="+ Create" showButton={true} />
         {mockData.staffData.map((staff, index) => {
           return (
             <>
@@ -47,6 +49,7 @@ const Resources = () => {
                   <MobileNavButton key={index} name={resource.resourceName} />
                 );
               })}
+              <MobileHomeButton />
             </>
           );
         })}

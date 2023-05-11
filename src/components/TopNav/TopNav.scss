@@ -33,3 +33,9 @@
     max-width: 150px;
   }
 }
+
+@media screen and (max-width: 720px) {
+  .topnav {
+    margin-bottom: 20px;
+  }
+}

@@ -51,13 +51,10 @@
       margin-top: 5px;
     }
   }
-  .desktop__container {
-    &--right {
-      display: none;
-    }
-  }
 
   .resources {
-    padding-top: 100px;
+    .desktop__container {
+      display: none;
+    }
   }
 }

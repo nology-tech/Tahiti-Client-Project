@@ -2,10 +2,6 @@
 @use "../../styles/reset" as *;
 @use "../../styles/_typography" as *;
 
-.home {
-  display: none;
-}
-
 .SideNav {
   background-color: $color-primary;
   height: 100vh;
@@ -43,9 +39,6 @@
     text-decoration: none;
     background: $color-secondary;
   }
-  .home {
-    display: none;
-  }
 
   #line1 {
     padding-bottom: 15px;
@@ -55,30 +48,5 @@
 @media screen and (max-width: 720px) {
   .SideNav {
     display: none;
-  }
-
-  .home {
-    position: fixed;
-    top: 90%;
-    width: 100%;
-    box-shadow: 0px -20px 40px rgba(97, 65, 65, 0.07);
-    background-color: #fffbfb;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 15px;
-
-    .homeButton {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    h1 {
-      font-size: 16px;
-      font-family: "Jost";
-      margin: 0;
-    }
   }
 }

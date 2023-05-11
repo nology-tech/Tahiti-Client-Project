@@ -2,6 +2,7 @@ import React from "react";
 import "./Booking.scss";
 import SideNav from "../../components/SideNav/SideNav";
 import TopNav from "../../components/TopNav/TopNav";
+import MobileHomeButton from "../../components/MobileHomeButton/MobileHomeButton";
 
 const Booking = () => {
   return (
@@ -12,6 +13,7 @@ const Booking = () => {
         buttonTitle="+ Edit"
         showButton={false}
       />
+      <MobileHomeButton />
     </div>
   );
 };

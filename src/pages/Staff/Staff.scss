@@ -23,16 +23,13 @@
 
 @media screen and (max-width: 720px) {
   .staff-page {
-    padding-top: 100px;
     height: 100vh;
     &__mobile {
       display: unset;
     }
 
     &__page {
-      &--rightside {
-        display: none;
-      }
+      display: none;
     }
   }
 }
