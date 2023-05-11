@@ -1,3 +1,19 @@
 .settings-layout {
   display: flex;
+
+  &--mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .settings-layout {
+    display: none;
+    &--mobile {
+      display: unset;
+    }
+    &--body {
+      height: 100vh;
+    }
+  }
 }

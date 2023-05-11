@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./TopNav.scss";
+import WhiteLogo from "../../assets/images/logo-white.svg";
 
 const TopNav = ({ heading, buttonTitle, showButton, showDropdown }) => {
   const [staffChosen, setStaffChosen] = useState("");
@@ -12,6 +13,9 @@ const TopNav = ({ heading, buttonTitle, showButton, showDropdown }) => {
 
   return (
     <div className="topnav">
+      <div className="topnav__logo-container">
+        <img src={WhiteLogo} alt="logo" />
+      </div>
       <div className="topnav__header">
         <h1 className="topnav__heading">{heading}</h1>
 

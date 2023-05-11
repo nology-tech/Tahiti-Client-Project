@@ -34,7 +34,7 @@ const Resources = () => {
   return (
     <div className="resources">
       <div className="resources__container">
-        <TopNav heading="Resources" buttonTitle="+ Create" showButton={true} />
+        <TopNav heading="Resources" />
         {mockData.staffData.map((staff, index) => {
           return (
             <>

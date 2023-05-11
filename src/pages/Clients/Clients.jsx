@@ -27,7 +27,7 @@ const Clients = () => {
   return (
     <div className="clients-container">
       <div className="clients-container__mobile">
-        <TopNav heading="Clients" buttonTitle="+ Create" showButton={true} />
+        <TopNav heading="Clients" />
         {mockData.clientData.map((client, index) => {
           return <MobileNavButton key={index} name={client.name} />;
         })}

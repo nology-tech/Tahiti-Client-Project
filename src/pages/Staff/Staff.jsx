@@ -30,12 +30,7 @@ const Staff = () => {
   return (
     <div className="staff-page">
       <div className="staff-page__mobile">
-        <TopNav
-          heading="Staff"
-          buttonTitle="+ Edit"
-          showButton={true}
-          showDropdown={true}
-        />
+        <TopNav heading="Staff" />
         {mockData.staffData.map((staff, index) => {
           return <MobileNavButton key={index} name={staff.fullName} />;
         })}
