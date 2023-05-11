@@ -7,9 +7,19 @@ import SideNav from "../../components/SideNav/SideNav";
 import TopNav from "../../components/TopNav/TopNav";
 import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
 import MobileHomeButton from "../../components/MobileHomeButton/MobileHomeButton";
+import { useState } from "react";
 
 const Staff = () => {
-  const getData = mockData.clientData.map((client) => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleInput = (event) => {
+    setSearchTerm(event.target.value);
+  };
+  const searchedClient = mockData.clientData.filter((client) => {
+    return client.name.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
+  const getData = searchedClient.map((client) => {
     return client.bookings.map((booking, index) => {
       return (
         <div key={index}>
@@ -25,7 +35,6 @@ const Staff = () => {
       );
     });
   });
-  // A sorting functionality needed for filtering a clients for each member of staffs
 
   return (
     <div className="staff-page">
@@ -52,6 +61,7 @@ const Staff = () => {
             column3={"Mobile number"}
             column4={"Booking date"}
             column5={"Booking time"}
+            handleInput={handleInput}
           />
           <div className="staff-wrap">{getData}</div>
         </div>
