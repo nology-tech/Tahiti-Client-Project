@@ -103,10 +103,6 @@ const AppointmentBookingForm = () => {
     "17:00",
   ];
 
-  const showArray = timeSlots.map((element, index) => {
-    return element[index];
-  });
-
   return (
     <div className="booking-form">
       <div className="booking-form__left">
@@ -159,9 +155,12 @@ const AppointmentBookingForm = () => {
           onChange={onChange}
           value={bookingDate}
         />
-
-        {/* {console.log(staffMember)}  */}
-
+        <label className="booking-form__right--dateLabel">Date:</label>
+        <DatePicker
+          className="mobile-date"
+          selected={date}
+          onChange={(date) => setStartDate(date)}
+        />
         <label className="booking-form__right--label">Time:</label>
 
         <div>
@@ -170,15 +169,16 @@ const AppointmentBookingForm = () => {
             value={time}
             onChange={handleTime}
           >
-            <option>{showArray}</option>
+            {timeSlots.map((element) => {
+              return (
+                <>
+                  <option>{element}</option>;
+                </>
+              );
+            })}
+            ;
           </select>
         </div>
-
-        <DatePicker
-          className="mobile-date"
-          selected={date}
-          onChange={(date) => setStartDate(date)}
-        />
       </div>
       <div className="mobile-button">
         <Button

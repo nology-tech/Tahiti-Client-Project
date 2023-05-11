@@ -47,6 +47,9 @@
     display: flex;
     flex-direction: column;
 
+    &--dateLabel {
+      display: none;
+    }
     &--label {
       font-size: 14px;
       color: $text-black;
@@ -225,41 +228,63 @@
 
 @media screen and (max-width: 720px) {
   .booking-form {
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
     &__left {
+      &--input {
+        width: 250px;
+      }
+
       &--buttons {
         display: none;
+      }
+
+      &--select {
+        width: 250px;
+        height: 49px;
+        margin-top: 12px;
+        padding: 12px;
       }
     }
     &__right {
       padding: 12px 0;
       margin: 0;
+
       &--desktop-calendar {
         display: none;
+      }
+      &--dateLabel {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 0;
+        margin-left: 9px;
+        display: unset;
       }
 
       &--label {
         padding: 10px;
       }
       &--select {
-        width: 349px;
+        width: 250px;
         height: 49px;
         margin-top: 12px;
         padding: 12px;
       }
     }
   }
+
   .mobile-date {
+    border-radius: 7px;
     display: unset;
-    width: 349px;
+    width: 250px;
     height: 40px;
     padding: 10px;
     margin: 10px;
     border: none;
   }
-
   .mobile-button {
     display: unset;
   }
