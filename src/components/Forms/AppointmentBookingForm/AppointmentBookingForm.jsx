@@ -183,7 +183,7 @@ const AppointmentBookingForm = () => {
       <div className="mobile-button">
         <Button
           name={"Submit"}
-          variant="yellowWide"
+          variant="yellowMid"
           onClick={handleMobileSubmit}
         />
       </div>

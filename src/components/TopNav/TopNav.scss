@@ -1,0 +1,61 @@
+@use "../../styles/variables" as *;
+
+.topnav {
+  max-height: 145px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+
+  &__header {
+    display: flex;
+  }
+
+  &__logo-container {
+    display: none;
+  }
+
+  &__button {
+    width: 130px;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    background-color: #e5c58a;
+    color: #ffffff;
+    font-size: 16px;
+  }
+
+  &__heading {
+    font-size: 32px;
+    font-family: Poppins;
+    color: #2d3748;
+  }
+
+  &__dropdown {
+    max-width: 150px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .topnav {
+    margin-bottom: 20px;
+    display: block;
+    background-color: $color-primary;
+    max-height: 310px;
+    border-radius: unset;
+    box-shadow: unset;
+
+    &__logo-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__heading {
+      color: white;
+    }
+  }
+}
