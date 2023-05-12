@@ -24,3 +24,23 @@
     font-size: 20px;
   }
 }
+
+.homeButton {
+  display: none;
+}
+
+@media screen and (max-width: 376px) {
+  * {
+    margin-bottom: 100px;
+  }
+
+  .clientActive {
+    height: 100%;
+  }
+  .content {
+    margin: auto;
+  }
+  .heading {
+    display: none;
+  }
+}

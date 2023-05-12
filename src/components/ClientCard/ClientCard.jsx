@@ -23,7 +23,7 @@ const ClientCard = () => {
         </a>
       </div>
       <div className="client-card-info">
-        <h1 className="client-card__name">Contact Details</h1>
+        <h1 className="client-card__contact">Contact Details</h1>
         <div className="client-card__details">
           <h2>Date of Birth:</h2>
           <p>{dateOfBirth}</p>
