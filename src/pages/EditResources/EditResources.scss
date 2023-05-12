@@ -10,5 +10,8 @@
 @media screen and (min-width: 720px) {
   .edit-resources {
     display: flex;
+    &__container {
+      width: 100vw;
+    }
   }
 }
