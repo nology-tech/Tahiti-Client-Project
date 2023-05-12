@@ -8,6 +8,7 @@ import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
 
 const Clients = () => {
   const getClientsData = mockData.clientData.map((client, index) => {
+    console.log(client)
     return client.bookings.map((booking) => {
       return (
         <TableCard
@@ -17,6 +18,7 @@ const Clients = () => {
           item3={client.email}
           item4={client.mobileNumber}
           item5={booking.practitioner}
+          clientId={client.id}
         />
       );
     });

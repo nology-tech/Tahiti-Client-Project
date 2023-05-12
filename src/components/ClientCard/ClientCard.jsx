@@ -4,10 +4,9 @@ import { useParams } from "react-router-dom";
 import mockData from "../../assets/data/mockData";
 
 const ClientCard = () => {
+
   const { clientId } = useParams();
-
-  const currentClient = mockData.clientData.find((client) => (client.id = clientId));
-
+  const currentClient = mockData.clientData.find((client) => (client.id == clientId));
   const { name, ClientImage, email, dateOfBirth, mobileNumber } = currentClient;
 
   return (
