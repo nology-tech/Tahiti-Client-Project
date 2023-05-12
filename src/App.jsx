@@ -17,7 +17,7 @@ import WelcomePage from "../src/pages/WelcomePage/WelcomePage";
 import { useState } from "react";
 
 const App = () => {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(true);
 
   return (
     <>
