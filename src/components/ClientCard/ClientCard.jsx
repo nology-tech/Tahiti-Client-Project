@@ -34,6 +34,8 @@ const ClientCard = () => {
           <p>{mobileNumber}</p>
         </div>
       </div>
+      <div className="client-card-booking">
+      </div>
     </div>
   );
 };

@@ -5,10 +5,12 @@ import ClientCard from "../../components/ClientCard/ClientCard";
 
 const ClientActive = () => {
   return (
-    <div>
-      <h1>ClientActive</h1>
+    <div className="clientActive">
       <SideNav />
-      <ClientCard/>
+      <div className="content">
+        <h1 className="heading">Overview</h1>
+        <ClientCard className="cards"/>
+      </div>
     </div>
   );
 };
