@@ -101,15 +101,13 @@
   img {
     width: 25px;
   }
-  .selector {
-    cursor: pointer;
-  }
+
 }
 .yellowMid {
   margin: 0;
   margin-top: 30px;
 }
-input[type="radio"]:checked:after {
+.radio-input[type="radio"]:checked:after {
   width: 7px;
   height: 8px;
   border-radius: 15px;
@@ -120,8 +118,9 @@ input[type="radio"]:checked:after {
   content: "";
   display: inline-block;
   visibility: visible;
+  cursor: pointer;
 }
-input[type="radio"]:before {
+.radio-input[type="radio"]:before {
   content: " ";
   display: inline-block;
   position: relative;
@@ -132,6 +131,7 @@ input[type="radio"]:before {
   border-radius: 50%;
   border: 2px solid #95accb;
   background-color: transparent;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 380px) {

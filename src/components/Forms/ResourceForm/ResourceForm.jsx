@@ -5,21 +5,44 @@ import mockData from "../../../assets/data/mockData";
 
 const ResourceForm = () => {
   const [category, setCategory] = useState("Health");
-  const [staffMember, setStaffMember] = useState("");
+  const [costPerUnit, setCostPerUnit] = useState("");
+  const [quantityRemaining, setQuantityRemaining] = useState("");
+  const [staffMember, setStaffMember] = useState("Tom Tompson");
   const [resourceName, setResource] = useState("");
   const [autoPurchase, setAutoPurchase] = useState("No");
   const [autoPurchaseLevel, setAutoPurchaseLevel] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmitDesktop = (event) => {
     event.preventDefault();
-    const appointmentData = {
+    const resourceData = {
+      costPerUnit,
+      quantityRemaining,
       category,
       staffMember,
       resourceName,
       autoPurchaseLevel,
       autoPurchase,
     };
-    console.log(appointmentData);
+    console.log(resourceData);
+  };
+
+  const handleSubmitMobile = (event) => {
+    event.preventDefault();
+    const resourceDataMobile = {
+      costPerUnit,
+      quantityRemaining,
+      autoPurchaseLevel,
+      autoPurchase,
+    };
+    console.log(resourceDataMobile);
+  };
+
+  const handleCostPerUnit = (event) => {
+    setCostPerUnit(event.target.value);
+  };
+
+  const handleQuantityRemaining = (event) => {
+    setQuantityRemaining(event.target.value);
   };
 
   const handleCategory = (event) => {
@@ -49,11 +72,16 @@ const ResourceForm = () => {
         <input
           className="resource-form__input"
           type="text"
-          value={category}
-          onChange={handleCategory}
+          value={quantityRemaining}
+          onChange={handleQuantityRemaining}
         />
         <label className="resource-form__label">Cost per Unit</label>
-        <input className="resource-form__input" />
+        <input
+          className="resource-form__input"
+          value={costPerUnit}
+          onChange={handleCostPerUnit}
+        />
+
         <label className="resource-form__label">Auto-Purchase</label>
         <div className="resource-form__radio-buttons">
           <label className="resource-form__radio-buttons--label">Yes</label>
@@ -63,6 +91,7 @@ const ResourceForm = () => {
             id="auto1"
             name="auto-purchase"
             value="yes"
+            onChange={handleAutoPurchase}
           />
           <label className="resource-form__radio-buttons--label">No</label>
           <input
@@ -71,15 +100,25 @@ const ResourceForm = () => {
             id="auto2"
             name="auto-purchase"
             value="no"
+            onChange={handleAutoPurchase}
           />
         </div>
         <label className="resource-form__label">Auto-Purchase Level</label>
-        <input className="resource-form__input" />
+        <input
+          className="resource-form__input"
+          value={autoPurchaseLevel}
+          onChange={handleAutoPurchaseLevel}
+        />
       </div>
       <div className="mobile-save-btn">
-        <Button name="Save" image={false} variant="yellowWide" />
+        <Button
+          name="Save"
+          image={false}
+          variant="yellowWide"
+          onClick={handleSubmitMobile}
+        />
       </div>
-
+      {/* <!---------------------------------------------------------------------------------------> */}
       <div className="resource-form-desktop">
         <div className="resource-form-desktop__left">
           <label className="resource-form-desktop__left--label" type="number">
@@ -157,7 +196,7 @@ const ResourceForm = () => {
               name="Save"
               image={false}
               variant="yellowMid"
-              onClick={handleSubmit}
+              onClick={handleSubmitDesktop}
             />
           </div>
         </div>
