@@ -1,11 +1,12 @@
 import React from "react";
 import "./StaffBookingActive.scss";
 import SideNav from "../../components/SideNav/SideNav";
+import TopNav from "../../components/TopNav/TopNav";
 
 const StaffBookingActive = () => {
   return (
     <div>
-      <h1>StaffBookingActive</h1>
+      <TopNav heading ="Clients - Mark Mirchall" buttonTitle ="+ Edit" showButton={true}/>
       <SideNav />
     </div>
   );

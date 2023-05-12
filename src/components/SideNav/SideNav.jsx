@@ -8,14 +8,15 @@ import settingsIcon from "../../assets/images/settings-icon.svg";
 import NavItem from "../NavItem/NavItem";
 import navLine from "../../assets/images/nav-line.svg";
 import whiteLogo from "../../assets/images/logo-white.svg";
-import iconHouse from "../../assets/images/black-home-icon.png";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const SideNav = () => {
   return (
-    <div>
+    <>
       <section className="SideNav">
-        <img className="white-logo" src={whiteLogo} alt="logo-left" />
+        <div className="logo-container">
+          <img className="white-logo" src={whiteLogo} alt="logo-left" />
+        </div>
         <img className="SideNav--line" src={navLine} id="line1" />
         <div className="menu"></div>
 
@@ -81,14 +82,7 @@ const SideNav = () => {
           <NavItem image={settingsIcon} name="Settings" />
         </NavLink>
       </section>
-
-      <div className="home">
-        <Link to="/home" className="homeButton">
-          <img src={iconHouse} alt="" />
-          <h1>HOME</h1>
-        </Link>
-      </div>
-    </div>
+    </>
   );
 };
 

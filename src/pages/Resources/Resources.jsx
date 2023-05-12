@@ -4,18 +4,20 @@ import mockData from "../../assets/data/mockData";
 import Table from "../../components/Table/Table";
 import TableCard from "../../components/TableCard/TableCard";
 import SideNav from "../../components/SideNav/SideNav";
+import TopNav from "../../components/TopNav/TopNav";
 import MobileNavButton from "../../components/MobileNavButton/MobileNavButton";
+import MobileHomeButton from "../../components/MobileHomeButton/MobileHomeButton";
 import { useState } from "react";
 
 const Resources = () => {
-  const [searchTerm, setSearchTerm]=useState("")
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleInput = (event) => {
-    setSearchTerm(event.target.value)
-  }
-  const searchedObject = mockData.staffData.filter((resource)=> {
-    return resource.fullName.toLowerCase().includes(searchTerm.toLowerCase())
-  })
+    setSearchTerm(event.target.value);
+  };
+  const searchedObject = mockData.staffData.filter((resource) => {
+    return resource.fullName.toLowerCase().includes(searchTerm.toLowerCase());
+  });
 
   const getData = searchedObject.map((staff, index) => {
     return (
@@ -39,10 +41,10 @@ const Resources = () => {
       </>
     );
   });
-
   return (
     <div className="resources">
       <div className="resources__container">
+        <TopNav heading="Resources" />
         {mockData.staffData.map((staff, index) => {
           return (
             <>
@@ -60,10 +62,11 @@ const Resources = () => {
             </>
           );
         })}
+        <MobileHomeButton />
       </div>
-
       <div className="desktop__container">
         <SideNav />
+        <TopNav heading="Resources" buttonTitle="+ Create" showButton={true} />
         <div className="desktop__container--right">
           <Table
             title={"Health Products"}
