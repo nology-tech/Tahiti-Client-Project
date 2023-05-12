@@ -212,7 +212,7 @@ const mockData = {
 
       resources: [
         {
-          resourceName: "notepad",
+          resourceName: "Notepad",
           resourceId: 1,
           quantity: 20,
           autoPurchase: "YES",

@@ -6,11 +6,13 @@
   }
 
   .desktop__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 309px 1fr;
+    grid-template-rows: 145px 1fr;
 
     &--right {
-      width: 100%;
-      height: auto;
+      margin-top: 30px;
+      grid-column-start: 2;
     }
   }
 
@@ -48,13 +50,10 @@
       margin-top: 5px;
     }
   }
-  .desktop__container {
-    &--right {
-      display: none;
-    }
-  }
 
   .resources {
-    padding-top: 100px;
+    .desktop__container {
+      display: none;
+    }
   }
 }

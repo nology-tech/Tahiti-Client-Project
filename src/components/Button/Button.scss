@@ -22,7 +22,7 @@
 
 .grayMid {
   background-color: $color-buttonTertiary;
-  margin-top: 70px;
+  width: 170px;
 }
 
 .yellowNarrow {
@@ -49,7 +49,7 @@
     width: 243px;
   }
   .yellowMid {
-    display: none;
+    display: unset;
   }
   .grayMid {
     display: none;

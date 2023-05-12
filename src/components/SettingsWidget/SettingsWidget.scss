@@ -139,10 +139,12 @@ input[type="radio"]:before {
     margin-left: 10px;
     position: absolute;
     left: 8px;
-    width: 337px;
+    width: unset;
     height: 340px;
     display: flex;
+    top: unset;
     flex-direction: column;
+    padding: 10px;
     .colorMode {
       display: block;
       h1 {

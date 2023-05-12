@@ -1,11 +1,12 @@
 import React from 'react'
 import "./ClientsSearch.scss"
 import SideNav from "../../components/SideNav/SideNav";
+import TopNav from "../../components/TopNav/TopNav"
 
 const ClientsSearch = () => {
   return (
     <div>
-      <h1>ClientsSearch</h1>
+      <TopNav heading ="Clients" buttonTitle ="+ Create" showButton={true}/>
       <SideNav/> 
     </div>
   )

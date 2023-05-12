@@ -5,10 +5,13 @@
     display: none;
   }
   &__page {
-    display: flex;
+    display: grid;
+    grid-template-columns: 309px 1fr;
+    grid-template-rows: 145px 1fr;
 
     &--rightside {
       width: 100%;
+      margin-top: 30px;
     }
   }
 
@@ -20,16 +23,13 @@
 
 @media screen and (max-width: 720px) {
   .staff-page {
-    padding-top: 100px;
     height: 100vh;
     &__mobile {
       display: unset;
     }
 
     &__page {
-      &--rightside {
-        display: none;
-      }
+      display: none;
     }
   }
 }
