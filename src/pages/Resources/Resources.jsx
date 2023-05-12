@@ -35,6 +35,7 @@ const Resources = () => {
               item3={resource.constPerUnit}
               item4={resource.autoPurchase}
               item5={resource.autoPurchaseLevel}
+              link ="edit-resources"
             />
           );
         })}
