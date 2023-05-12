@@ -118,7 +118,7 @@ const ResourceForm = () => {
           onClick={handleSubmitMobile}
         />
       </div>
-      {/* <!---------------------------------------------------------------------------------------> */}
+
       <div className="resource-form-desktop">
         <div className="resource-form-desktop__left">
           <label className="resource-form-desktop__left--label" type="number">
