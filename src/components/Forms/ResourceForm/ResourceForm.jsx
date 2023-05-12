@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "../../Button/Button";
 import "./ResourceForm.scss";
 import mockData from "../../../assets/data/mockData";
@@ -12,6 +13,12 @@ const ResourceForm = () => {
   const [autoPurchase, setAutoPurchase] = useState("No");
   const [autoPurchaseLevel, setAutoPurchaseLevel] = useState("");
 
+  const [popUp, setPopUp] = useState(false);
+
+  const handlePopUp = () => {
+    setPopUp(!popUp);
+  };
+
   const handleSubmitDesktop = (event) => {
     event.preventDefault();
     const resourceData = {
@@ -24,6 +31,7 @@ const ResourceForm = () => {
       autoPurchase,
     };
     console.log(resourceData);
+    handlePopUp(true);
   };
 
   const handleSubmitMobile = (event) => {
@@ -35,6 +43,7 @@ const ResourceForm = () => {
       autoPurchase,
     };
     console.log(resourceDataMobile);
+    handlePopUp(true);
   };
 
   const handleCostPerUnit = (event) => {
@@ -199,8 +208,40 @@ const ResourceForm = () => {
               onClick={handleSubmitDesktop}
             />
           </div>
+          <>
+            {popUp && (
+              <div className="display-pop-up">
+                <h1 className="display-pop-up__heading">
+                  Edit Resource Complete
+                </h1>
+                <Link to="/home">
+                  <Button
+                    onClick={handlePopUp}
+                    name="Home"
+                    image={false}
+                    variant="yellowMid"
+                  />
+                </Link>
+              </div>
+            )}
+          </>
         </div>
       </div>
+      <>
+        {popUp && (
+          <div className="display-pop-up">
+            <h1 className="display-pop-up__heading">Edit Resource Complete</h1>
+            <Link to="/home">
+              <Button
+                onClick={handlePopUp}
+                name="Home"
+                image={false}
+                variant="yellowMid"
+              />
+            </Link>
+          </div>
+        )}
+      </>
     </div>
   );
 };
