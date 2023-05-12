@@ -6,7 +6,7 @@ import sortIcon from "../../assets/images/sort-icon.svg";
 import filterIcon from "../../assets/images/filter-icon.svg";
 import searchIcon from "../../assets/images/search-icon.svg";
 
-const Table = ({ column1, column2, column3, column4, column5, title }) => {
+const Table = ({ column1, column2, column3, column4, column5, title, searchTerm, handleInput }) => {
   return (
     <div>
       <div className="table-head-container">
@@ -20,6 +20,8 @@ const Table = ({ column1, column2, column3, column4, column5, title }) => {
             <input
               className="table-head-container__sorting--input"
               type="text"
+              value={searchTerm}
+              onInput={handleInput}
             />
             <img
               className="table-head-container__sorting--search"

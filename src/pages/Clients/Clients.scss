@@ -3,6 +3,7 @@
 
 .clients-container {
   background-color: #ebebf5;
+  height: 100vh;
 
   &__mobile {
     display: none;
@@ -25,7 +26,6 @@
 @media screen and (max-width: 720px) {
   .clients-container {
     padding-top: 100px;
-    height: 100vh;
 
     &__mobile {
       display: unset;
