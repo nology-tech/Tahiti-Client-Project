@@ -7,16 +7,23 @@ import AppointmentBookingForm from "../../components/Forms/AppointmentBookingFor
 
 const Booking = () => {
   return (
-    <div className="booking-layout">
-      <SideNav />
-      <TopNav
-        heading="Book Appointment"
-        buttonTitle="+ Edit"
-        showButton={false}
-      />
-      <AppointmentBookingForm />
-      <MobileHomeButton />
-    </div>
+    <>
+      <div className="booking-layout--desktop">
+        <SideNav />
+        <TopNav
+          heading="Book Appointment"
+          buttonTitle="+ Edit"
+          showButton={false}
+        />
+        <AppointmentBookingForm />
+        <MobileHomeButton />
+      </div>
+      <div className="booking-layout--mobile">
+        <TopNav heading="Book Appointment" />
+        <AppointmentBookingForm />
+        <MobileHomeButton />
+      </div>
+    </>
   );
 };
 
