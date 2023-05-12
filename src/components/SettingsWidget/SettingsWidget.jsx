@@ -42,7 +42,7 @@ const SettingsWidget = () => {
         <div className="theme">
           <div className="theme-modern">
             <p>Modern</p>
-            <input
+            <input className="radio-input"
               name="select"
               type="radio"
               onClick={changeToModern}
@@ -51,9 +51,9 @@ const SettingsWidget = () => {
           </div>
           <div className="theme-tech">
             <p>Tech</p>
-            <input
+            <input 
               name="select"
-              className="selector"
+              className="radio-input"
               type="radio"
               onClick={changeToTech}
             />
