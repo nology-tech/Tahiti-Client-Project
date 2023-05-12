@@ -30,6 +30,7 @@ const Staff = () => {
             item3={client.mobileNumber}
             item4={booking.bookingDate}
             item5={booking.bookingTime}
+            link = "home"
           />
         </div>
       );

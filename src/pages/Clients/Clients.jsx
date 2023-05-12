@@ -29,6 +29,7 @@ const Clients = () => {
           item3={client.email}
           item4={client.mobileNumber}
           item5={booking.practitioner}
+          link="home"
         />
       );
     });
